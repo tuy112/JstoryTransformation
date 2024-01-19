@@ -2,6 +2,8 @@
 
 Github 링크 : https://github.com/tuy112/Jstory
 
+# Jstory TOBE
+
 ### Jstory 고도화 프로젝트 주요 내용
 
 1. 와이어프레임 / erd / rest API / 요구분석 PPT 제작 / 기능 체크리스트 제작

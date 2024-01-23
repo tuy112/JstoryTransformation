@@ -34,9 +34,9 @@ function App() {
             
             <div className="dashBoard">
               <p className="koreanIntro">
-                <a className="hello">안녕하세요!</a>제 이름은 <a className="hello">김재혁!</a><br/>
+                <a className="hello">안녕하세요.</a>제 이름은 <a className="hello">김재혁!</a><br/>
                 <a className="highlight type1">훗날</a> 개발자하면 <a className="highlight type2">모두가</a> 인정할<br/>
-                API 개발이 가능한<a class="highlight type3"> 프론트엔드 개발자</a>입니다.
+                백 개발이 가능한<a class="highlight type3"> 프론트엔드 개발자</a>입니다.
               </p>
             </div>
           </div>
@@ -49,30 +49,32 @@ function App() {
         </section>
 
         <section className='section'>
-          <h2>project</h2>
+          <h2>project <em>[ 아래 항목을 클릭해주세요 ]</em></h2>
           <ul className="projectBox">
             <li className="project">
-              <h3>PROJECT <em>[ 아래 항목을 클릭해주세요 ]</em></h3>
+              <h3>Work PROJECT</h3>
               <p>
                 ☆ 1 <br/>
-                신한은행 통합단말 차세대프로젝트 [2022-02-03 ~ 2022-09-30]<br/>
+                신한은행 통합단말 차세대프로젝트 <br/>
+                [2022-02-03 ~ 2022-09-30]<br/>
                 - 업무명 : 화면로직개발<br/>
-                - 사용 언어 : <br/>
+                - 사용 언어 : Javascript, Java <br/>
               </p>
+              <br/>
               <p>
                 ☆ 2 <br/>
-                
-                LX플랫폼 고도화 프로젝트 [2023-11 ~ 2024-01]<br/>
-                - 업무명 : <br/>
-                - 사용 언어 : <br/>
+                LX플랫폼 고도화 프로젝트<br/>
+                [2023-11 ~ 2024-01]<br/>
+                - 업무명 : 플랫폼 2D 환경 고도화 <br/>
+                - 사용 언어 : Java(Spring) <br/>
               </p>
             </li>
             <li className="education">
-              <h3>내가 만든 프로젝트</h3>
-              <p><a href="./index.html"> 1. JStory : 저의 메인 페이지입니다.</a></p>
-              <p><a href="./project/bicycle/index.html"> 2. 국토종주 이야기 : 633km 국토종주 이야기</a></p>
+              <h3>My Project</h3>
+              <p><a href="./index.html"> 1. JStory 고도화 프로젝트</a></p>
+              <p><a href="./project/bicycle/index.html"> 2. 국토종주 이야기 : 633km 국토종주 이야기 (OpenLayers)</a></p>
               <p><a href="./project/jboard-lv4/assets/index.html"> 3. Jboard : 게시판 CRUD</a></p>
-              <p><a href="./project/todo/index.html">4. Todo Page</a></p>
+              <p><a href="./project/todo/index.html">4. Jstory ASIS</a></p>
               <p><a href="./project/">5. coding Test 준비..!  </a></p>
               <p><a href="./project/manboWalk/index.html">6. team.Nivea를 소개합니다 - Python 사용  </a></p>
               <p><a href="./project/manboWalk/index.html">7. ChiolGram - Node.js 최종 프로젝트</a></p>
@@ -85,7 +87,7 @@ function App() {
 
         {/* footer */}
         <section className='section fp-auto-height'>
-          <h2>Made By KimJaeHyeok</h2>
+          <h2>Made By FE.KimJaeHyeok</h2>
         </section>
       </div>
 

@@ -14,7 +14,8 @@ $(function(){
 
 
 // 햄버거 메뉴
-const burger = $('.menuTrigger');
+const burger = $('#menuTrigger');
+const bar = $('#navBar');
 
 burger.each(function(index){
   const $this = $(this);
@@ -22,5 +23,11 @@ burger.each(function(index){
   $this.on('click', function(e){
     e.preventDefault();
     $(this).toggleClass('active-' + (index+1));
+
+    if ($this.hasClass('active-' + (index+1))) {
+      bar.css('display', 'block');
+    } else {
+      bar.css('display', 'none');
+    }
   })
 });

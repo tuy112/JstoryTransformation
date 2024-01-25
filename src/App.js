@@ -16,12 +16,11 @@ function App() {
 
       {/* header */}
       <header id="header">
-        <a class="menuTrigger" href="#">
+        <a class="menuTrigger" id="menuTrigger" href="#">
           <span></span>
           <span></span>
           <span></span>
         </a>
-        <div className="navBar"></div>
         <h1><a href="#">Jstory</a></h1>
 
         <div className="navBar" id="navBar">
@@ -35,7 +34,7 @@ function App() {
 
           <ul className="jboard">
             <li><a href="#">게시판</a></li>
-            <li><a href="#">Jstol에게 실시간 채팅하기</a></li>
+            <li><a href="#">실시간 채팅</a></li>
           </ul>
         </div>
       </header>

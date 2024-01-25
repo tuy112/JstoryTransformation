@@ -2,8 +2,10 @@ import React from "react";
 
 import './fullpage/jquery.fullPage.js';
 import './fullpage/jquery.fullPage.css';
+
 import './css/reset.css';
 import './css/main.css';
+
 import './js/main.js';
 
 function App() {
@@ -19,19 +21,30 @@ function App() {
           <span></span>
           <span></span>
         </a>
-        <nav className="nav">
-          <ul className="ul">
-            <li><a href="#"></a></li>
-          </ul>
-        </nav>
+        <div className="navBar"></div>
         <h1><a href="#">Jstory</a></h1>
+
+        <div className="navBar" id="navBar">
+          <ul className="gnb">
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">메뉴5</a></li>
+          </ul>
+
+          <ul className="jboard">
+            <li><a href="#">게시판</a></li>
+            <li><a href="#">Jstol에게 실시간 채팅하기</a></li>
+          </ul>
+        </div>
       </header>
+
 
       {/* body */}
       <div className="wrap" id='fullpage'>
         <section className='section'>
           <div className="slide">
-            
             <div className="dashBoard">
               <p className="koreanIntro">
                 <a className="hello">안녕하세요.</a>제 이름은 <a className="hello">김재혁!</a><br/>

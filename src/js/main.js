@@ -12,6 +12,7 @@ $(function(){
 	});
 })
 
+
 // 햄버거 메뉴
 const burger = $('.menuTrigger');
 

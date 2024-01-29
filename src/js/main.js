@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-// 풀페이지
+// 1. FullPage Controller
 $(function(){
     $('#fullpage').fullpage({
 		//options here
@@ -13,7 +13,7 @@ $(function(){
 })
 
 
-// 햄버거 메뉴
+// 2. Hamburger Menu
 const burger = $('#menuTrigger');
 const bar = $('#navBar');
 

@@ -100,13 +100,6 @@ form .signcomBtn:hover {
 
 
 /* board css */
-.jboard {
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-  
 h1 {
     font-size: 24px;
     margin-bottom: 13px;

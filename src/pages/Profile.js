@@ -27,7 +27,7 @@ const Profile = () => {
     return (
         <>
             {/* 본문 바로가기 */}
-            <p id="skipNav" class="hide"><a href="./index.html">본문 바로가기</a></p>
+            <p id="skipNav" className="hide"><a href="./index.html">본문 바로가기</a></p>
 
             {/* header */}
             <header id="header">
@@ -50,7 +50,7 @@ const Profile = () => {
                 </ul>
 
                 <ul className="jboard">
-                    <li><a href="#">게시판</a></li>
+                    <li><Link to = "/jboard">게시판</Link></li>
                     <li><a href="#">실시간 채팅</a></li>
                 </ul>
                 </div>
@@ -58,21 +58,21 @@ const Profile = () => {
 
             {/* subVisual */}
             <section className="subVisual" id="subVisual">
-                <div class="inner">
+                <div className="inner">
                     <h2>PROFILE</h2>
                 </div>
             </section>
 
             {/* main */}
             <section className="main">
-                <div class="profile intro">
-                    <div class="inner">
+                <div className="profile intro">
+                    <div className="inner">
                         
-                        <div class="txtWrap">
+                        <div className="txtWrap">
                             <h2>About ME</h2>
                             <img src={me} alt="나자신"/>
-                            <p>"기획, 디자인, 개발까지 다하는 인간 스타트업이 되기 위해서 노력중에 있습니다. <br/>
-                            비록 행정, 법, 경영학을 전공하였으나, 졸업 이후 컴공공부를 따로 하였으며<br/>
+                            <p>"기획, 디자인, 개발까지 다하는 인간 스타트업이 되기 위해서 노력 중에 있습니다. <br/>
+                            비록 행정, 법, 경영학을 전공하였으나, 졸업 이후 약 5년 간 컴공공부를 따로 하였으며<br/>
                             SI 개발자가 되었고 젊은 나이에 대규모 프로젝트를 경험하였습니다.<br/>
                             Node.js가 제 주력 언어이며 React.js도 사용가능합니다.<br/>
                             <br/>
@@ -82,8 +82,8 @@ const Profile = () => {
                     </div>
                 </div>
 
-                <div class="profile addi">
-                    <div class="inner">
+                <div className="profile addi">
+                    <div className="inner">
                         <div>
                             <h2>Capability</h2>
                             <p>Node.js &#40;Express.js, Nest.js&#41; </p>

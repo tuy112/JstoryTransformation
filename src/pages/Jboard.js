@@ -26,7 +26,7 @@ const Jboard = () => {
     return (
         <>
             <header id="header">
-                <div class="inner">
+                <div className="inner">
                     <div className="menu menuIcon" onClick={ hamburgerMenu }>
                     <div className="bar"></div>
                     <div className="bar"></div>
@@ -50,8 +50,8 @@ const Jboard = () => {
                         <li><a href="#">실시간 채팅</a></li>
                     </ul>
                 </div>
-                    <nav class="nav">
-                        <ul class="gnb">
+                    <nav className="nav">
+                        <ul className="gnb">
                             <li><a href="./login.html">로그인</a></li>
                             <li><a href="./signup.html">회원가입</a></li>
                             <li><a onclick="logout();">로그아웃</a></li>
@@ -61,9 +61,9 @@ const Jboard = () => {
             </header>
 
             <main id="container" class="main">
-                <div class="jboard">
+                <div className="jboard">
                     <h1>게시글 목록</h1>
-                    <table id="post-list" class="postList">
+                    <table id="post-list" className="postList">
                         <thead>
                             <tr>
                                 <th>제목</th>
@@ -81,10 +81,10 @@ const Jboard = () => {
                             </tr>
                         </tbody>
                         <tfoot>
-                            <div class="postBox">
+                            <div className="postBox">
                                 <input type="text" id="comment-author" class="title" placeholder="제목" />
                                 <input type="text" id="comment-content" class="content" placeholder="내용" />
-                                <button id="comment-submit" class="commentBtn">게시글 올리기</button>
+                                <button id="comment-submit" className="commentBtn">게시글 올리기</button>
                             </div>
                         </tfoot>
                     </table>

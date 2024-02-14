@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { SectionsContainer, Section } from 'react-fullpage';
 
-// import $ from 'jquery';
-
 import '../fullpage/jquery.fullPage';
 import '../css/reset.css';
 import '../css/main.css';
@@ -11,18 +9,19 @@ import scrollDown from '../images/scrollDown.jpg';
 
 const Home = () => {
 
+    // 1. 풀페이지 옵션
     let options = {
         activeClass:'active', // the class that is appended to the sections links
         anchors:['sectionOne', 'sectionTwo','sectionThree'], // the anchors for each sections
         //arrowNavigation:true, // use arrow keys
         className:'SectionContainer', // the class name for the section container
-        delay:1500, // the scroll animation speed
+        delay:2000, // the scroll animation speed
         //navigation:true, // use dots navigatio
         scrollBar:false, // use the browser default scrollbar
         verticalAlign:false // align the content of each section vertical
       };
 
-    // 1. 햄버거 메뉴 구현
+    // 2. 햄버거 메뉴 구현
     function hamburgerMenu() {
         const menu = document.querySelector(".menu");
         const navBar = document.querySelector("#navBar");
@@ -66,8 +65,8 @@ const Home = () => {
                 </ul>
 
                 <ul className="jboard">
-                    <li><Link to = "/jboard">게시판 &lt;Jboard&gt;</Link></li>
-                    <li><a href="#">실시간 채팅</a></li>
+                    <li><Link to = "/jboard">게시판</Link></li>
+                    <li><Link to = "#">실시간 채팅하기</Link></li>
                 </ul>
             </div>
         </header>
@@ -132,7 +131,7 @@ const Home = () => {
             <Section className="section">
                 <div class="lifeGraph">
                     <div class="shortView">
-                        <h4>나의 개발 경력 [2021 ~ 2024]</h4>
+                        <h4>개발 경력 [2021 ~ 2024]</h4>
                         <dl>
                             <dt>2024년</dt>
                             <dd><strong>Jstory 고도화 프로젝트 (React.js 적용 중) </strong><em>2024년01월20일 ~ ing</em></dd>

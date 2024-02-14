@@ -1,11 +1,15 @@
 /* subPage common */
-.subVisual {}
-.subVisual .inner {}
+.subVisual {
+    background-color: #e5c1c5;
+}
+.subVisual .inner {
+    height: 100px;
+}
 .subVisual h2 {
     text-align: center;
     font-weight: 600;
     font-size: 30px;
-    margin-top: 100px;
+    padding-top: 10px;
 }
 .main {
     margin-bottom: 100px;
@@ -34,7 +38,6 @@
 .profile.intro .txtWrap p {
     line-height: 2.1;
 }
-
 .profile.addi {}
 .profile.addi p {
     line-height: 2.1;

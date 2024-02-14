@@ -1,0 +1,59 @@
+/* subPage common */
+.subVisual {}
+.subVisual .inner {}
+.subVisual h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 100px;
+}
+.main {
+    margin-bottom: 100px;
+}
+
+/* ==================================================== */
+
+/* profile */
+.profile {
+    text-align: center;
+}
+.profile h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.profile.intro {}
+.profile.intro .inner {}
+.profile.intro .txtWrap {}
+.profile.intro .txtWrap img {
+    width: 300px;
+    height: 400px;
+}
+.profile.intro .txtWrap p {
+    line-height: 2.1;
+}
+
+.profile.addi {}
+.profile.addi p {
+    line-height: 2.1;
+}
+
+
+/* ==================================================== */
+/* project */
+.projectBox {
+    text-align: center;
+}
+.projectBox h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.projectBox h2 em {
+    font-size: 13px;
+    font-weight: 500;
+}

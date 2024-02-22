@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { SectionsContainer, Section } from 'react-fullpage';
 
-import '../fullpage/jquery.fullPage';
 import '../css/reset.css';
 import '../css/main.css';
 import scrollDown from '../images/scrollDown.jpg';
@@ -66,6 +65,7 @@ const Home = () => {
 
                 <ul className="jboard">
                     <li><Link to = "/jboard">게시판</Link></li>
+                    <li><Link to = "/three">3D공간</Link></li>
                     <li><Link to = "#">실시간 채팅하기</Link></li>
                 </ul>
             </div>
@@ -131,7 +131,7 @@ const Home = () => {
             <Section className="section">
                 <div class="lifeGraph">
                     <div class="shortView">
-                        <h4>개발 경력 [2021 ~ 2024]</h4>
+                        <h4>개발 Story [2021 ~ 2024]</h4>
                         <dl>
                             <dt>2024년</dt>
                             <dd><strong>Jstory 고도화 프로젝트 (React.js 적용 중) </strong><em>2024년01월20일 ~ ing</em></dd>

@@ -36,7 +36,7 @@ const Profile = () => {
                     <div className="bar"></div>
                     <div className="bar"></div>
                 </div>
-                <h1><a href="#">Jstory</a></h1>
+                <h1><Link to = "/" >Jstory</Link></h1>
 
                 <div className="navBar" id="navBar">
                 <ul className="gnb">

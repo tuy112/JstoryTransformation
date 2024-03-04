@@ -50,7 +50,7 @@ const Home = () => {
                 <div className="bar"></div>
                 <div className="bar"></div>
             </div>
-            <h1><a href="#">Jstory</a></h1>
+            <h1><Link to = "/" >Jstory</Link></h1>
 
             <div className="navBar" id="navBar">
                 <ul className="gnb">
@@ -135,6 +135,7 @@ const Home = () => {
                         <dl>
                             <dt>2024년</dt>
                             <dd><strong>Jstory 고도화 프로젝트 (React.js 적용 중) </strong><em>2024년01월20일 ~ ing</em></dd>
+                            <dd><strong>정보처리기사 공부 중 (2회 필기/실기 응시 예정) </strong><em>필기 시험일 : 5월</em></dd>
                             <dd><strong>SI (주)제타럭스시스템 계약종료 퇴사 </strong><em>2024년01월29일</em></dd>
                         </dl>
                         <dl>

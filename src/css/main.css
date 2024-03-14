@@ -7,11 +7,25 @@
     background-color: #79edff;
 }
 .section:nth-child(2) {
-    background-color: #e2e2e2;
+    background-color: #e3bfac;
+    text-align: center;
+}
+.section:nth-child(3) {
+    background-color: #f8e58e;
+    text-align: center;
+}
+.section:nth-child(4) {
+    background-color: #111;
+}
+.section h2 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 100px;
+    margin-bottom: 90px;
     text-align: center;
 }
 
-/* full page - sectionOne */
+/* full page - main Page */
 .dashBoard { 
     text-align: center;
     margin-top: 330px;
@@ -61,7 +75,7 @@
 }
 .scroll { 
     position: fixed; 
-    top: 30%; 
+    top: 17%; 
     left: 53%;
     transform: translateX(-50%); 
     animation: ani 0.7s linear infinite alternate;
@@ -72,153 +86,127 @@
     margin-right: 50px;
 }
 @keyframes ani {
-    0% { top: 30%; }
-    100% { top: 29%; }
+    0% { top: 17%; }
+    100% { top: 18%; }
 }
 
-/* full page - sectionTwo */
-.section:nth-child(2) h2 {
-    font-size: 25px;
-    font-weight: 600;
-    margin-top: 350px;
-    margin-bottom: 20px;
+/* full page - About Me */
+.section:nth-child(2) {
+    display: flex;
 }
-.section:nth-child(2) h3 {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-.section:nth-child(2) .projectBox {
+.section:nth-child(2) .introduceBox {
+    /* width: 80%; */
     margin: 0 auto;
-    width: 700px;
-    height: 350px;
+}
+.section:nth-child(2) .topBox, .section:nth-child(2) .bottomBox {
+    display: flex;
+    justify-content: center;
+}
+.section:nth-child(2) .introduceBox li i {
+    margin-bottom: 30px;
+}
+.section:nth-child(2) .introduceBox li p {}
+.detailBox {
     border: 1px solid #333;
-    padding: 30px;
-    border-radius: 30px;
+    border-radius: 10px;
+    width: 270px;
+    height: 200px;
+    margin: 20px;
+    background-color: #fff;
+    transition: 0.8s;
 }
-.section:nth-child(2) .projectBox .project {
-    float: left;
+.detailBox:nth-child(1), .detailBox:nth-child(4) {
+    margin-left: 0;
 }
-.section:nth-child(2) .projectBox .education p {
-    line-height: 1.9;
+.detailBox:hover {
+    scale: 1.2;
+}
+.detailBox p:nth-child(1) {
+    padding-top: 30px;
+}
+
+.outsideWork {
+    border: 1px solid #333;
+    background-color: #999;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 80%;
+    padding: 8px;
+    margin: 0 auto;
+}
+.outsideWork p {
+    color: #fff;
 }
 
 /* ==================================================== */
 .section:nth-child(3) {
-    width: calc(100%, -250px);
-    margin-left: 350px;
+    display: flex;
 }
-.lifeGraph h4 {
-    position: relative;
-    font-size: 21px;
-    color: #333;
-    line-height: 1;
-    font-weight: 700;
-    margin-top: 50px;
+.skillBox {
+    border: 1px solid #333;
+    border-radius: 10px;
+    width: 900px;
+    height: 500px;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    background-color: #fff;
 }
-.lifeGraph h4::before {
-    content: "";
-    position: absolute;
-    left: -40px; top: 50%;
-    width: 20px; height: 20px;
-    border-radius: 100%;
-    background: #ff5a2b;
-
-    transform: translateY(-50%);
-    border: 5px solid #1fa7f1;
-    box-sizing: border-box;
-}
-.lifeGraph .shortView {
-    position: relative;
-    padding: 0 0 0 40px;
-}
-.lifeGraph .shortView::before {
-    content: "";
-    position: absolute;
-    left: 8px; top: 0;
-    height: 100%;
-    border-left: 2px solid #ddd;
-}
-.lifeGraph .shortView:first-child:before {
-    top: 10px; 
-    height: calc(100%-10px);
-}
-.lifeGraph dl { 
-    padding: 15px 0 20px;
-}
-.lifeGraph dl dt {
-    position: relative;
-    font-size: 17px;
-    color: #333;
-    line-height: 1;
-    margin-bottom: 8px;
+.skillBox p {
+    line-height: 2.1;
     font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 30px;
 }
-.lifeGraph dl dt::before {
-    content: "";
-    position: absolute;
-    left: -37px; top: 50%;
-    width: 13px; height: 13px;
-    border-radius: 100%;
-    background: #1fa7f1;
+.skillBox p:last-child {
+    margin-bottom: -30px;
+}
 
-    transform: translateY(-50%);
-    border: 3px solid #ff5a2b;
-    box-sizing: border-box;
-}
-.lifeGraph dl dd {
-    line-height: 2.1;
-}
-.lifeGraph dl dd strong {
-    display: block;
-    font-size: 15px;
-    color: #333;
-    line-height: 2.1;
-    font-weight: 400;
-}
-.lifeGraph dl dd em {
-    display: block;
-    font-size: 12px;
-    color: #333;
-    line-height: 1.5;
-    padding-left: 30px;
-    font-weight: 600;
-}
 
 /* ============================================================= */
-/* wave */
-.wave {
-    opacity: .4;
-    position: absolute;
-    top: 3%;
-    left: 50%;
-    background: #0af;
-    width: 500px;
-    height: 500px;
-    margin-left: -250px;
-    margin-top: -250px;
-    transform-origin: 50% 48%;
-    border-radius: 43%;
-    animation: drift 3000ms infinite linear;
-  }
-  
-  .wave.-three {
-    animation: drift 5000ms infinite linear;
-  }
-  
-  .wave.-two {
-    animation: drift 7000ms infinite linear;
-    opacity: .1;
-    background: yellow;
-  }
-  @keyframes drift {
-    from { transform: rotate(0deg); }
-    from { transform: rotate(360deg); }
-  }
+.section:nth-child(4) {
+    display: flex;
+}
+.section:nth-child(4) {
+    color: #fff;
+}
+.linkBox {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+.linkBox li {
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+    padding: 30px;
+    transition: 0.3s;
+    width: 300px;
+    text-align: center;
+}
+.linkBox li:hover {
+    transform: translateY(20px);
+}
+.linkBox li h4 {
+    font-size: 25px;
+    font-weight: 600;
+    text-align-last: left;
+}
+.linkBox li .linkName {
+    color: #7474da;
+    /* text-decoration: underline; */
+    cursor: pointer;
+    text-align: left;
+}
+.linkBox li .linkIntro {
+    text-align: left;
+    padding-top: 30px;
+}
 
-  /* ==================================== */
-  @media (max-height: 864px) {
+/* ==================================== */
+@media (max-height: 864px) {
     .scroll {
         display: none;
     }
-  }
+}

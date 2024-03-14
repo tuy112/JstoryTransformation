@@ -6,12 +6,20 @@ import '../css/reset.css';
 import '../css/main.css';
 import scrollDown from '../images/scrollDown.jpg';
 
+// icon
+import { IoPerson } from "react-icons/io5";
+import { IoFitness } from "react-icons/io5";
+import { IoLocation } from "react-icons/io5";
+import { IoCallOutline } from "react-icons/io5";
+import { IoMailOutline } from "react-icons/io5";
+import { IoDesktopOutline } from "react-icons/io5";
+
 const Home = () => {
 
     // 1. 풀페이지 옵션
     let options = {
         activeClass:'active', // the class that is appended to the sections links
-        anchors:['sectionOne', 'sectionTwo','sectionThree'], // the anchors for each sections
+        anchors:['sectionOne', 'sectionTwo','sectionThree','sectionFour','sectionFive'], // the anchors for each sections
         //arrowNavigation:true, // use arrow keys
         className:'SectionContainer', // the class name for the section container
         delay:2000, // the scroll animation speed
@@ -21,6 +29,13 @@ const Home = () => {
       };
 
     // 2. 햄버거 메뉴 구현
+    function initializePage() {
+        const navBar = document.querySelector("#navBar");
+        navBar.style.display = "none"; // 페이지 로드 및 새로고침 시 navBar를 숨김
+    }
+    
+    document.addEventListener("DOMContentLoaded", initializePage);
+
     function hamburgerMenu() {
         const menu = document.querySelector(".menu");
         const navBar = document.querySelector("#navBar");
@@ -50,7 +65,7 @@ const Home = () => {
                 <div className="bar"></div>
                 <div className="bar"></div>
             </div>
-            <h1><Link to = "/" >Jstory</Link></h1>
+            <h1><Link to = "/" >KJH Portfolio</Link><span>- Jstory</span></h1>
 
             <div className="navBar" id="navBar">
                 <ul className="gnb">
@@ -93,71 +108,104 @@ const Home = () => {
                 </div>
             </Section>
             <Section className='section'>
-                <h2>project <em>[ 아래 항목을 클릭해주세요 ]</em></h2>
-                <ul className="projectBox">
-                    <li className="project">
-                    <h3>Work PROJECT</h3>
+                <h2>About Me</h2>
+                <div className="introduceBox">
+                    <ul className="topBox">
+                        <li>
+                            <div className="detailBox">
+                                <IoPerson size="40"/>
+                                <p>이름</p>
+                                <p>김재혁</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className="detailBox">
+                                <IoFitness size="40"/>
+                                <p>생년월일</p>
+                                <p>96.01.10</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className="detailBox">
+                                <IoLocation size="40"/>
+                                <p>주소지</p>
+                                <p>경기도 수원시 영통구 광교2동</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul className="bottomBox">
+                        <li>
+                            <div className="detailBox">
+                                <IoCallOutline size="40"/>
+                                <p>연락처</p>
+                                <p>010-4652-9973</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className="detailBox">
+                                <IoMailOutline size="40"/>
+                                <p>이메일</p>
+                                <p>master_catch@naver.com</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div className="detailBox">
+                                <IoDesktopOutline size="40"/>
+                                <p>경력</p>
+                                <p>(주)지아이데이타</p>
+                                <p>(주)제타럭스시스템</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div className="outsideWork">
+                    <p>* 외주 개발 또는 과외/레슨 문의는 위 연락처/이메일로 부탁드립니다.</p>
+                </div>
+            </Section>
+            <Section className="section">
+                <h2>SKILLS</h2>
+                <div className="skillBox">
                     <p>
-                        ☆ 1 <br/>
-                        신한은행 통합단말 차세대프로젝트 <br/>
-                        [2022-02 ~ 2022-10]<br/>
-                        - 업무명 : 화면로직개발<br/>
-                        - 사용 언어 : Javascript, Java <br/>
+                        FrontEnd : <br/>
+                        HTML / XML / CSS / JavaScript <br/>
+                        React.js / Jquery / JSP
                     </p>
-                    <br/>
+                    <div className="line"></div>
                     <p>
-                        ☆ 2 <br/>
-                        LX플랫폼 고도화 프로젝트<br/>
-                        [2023-11 ~ 2024-01]<br/>
-                        - 업무명 : 플랫폼 2D 환경 고도화 <br/>
-                        - 사용 언어 : Java(Spring) <br/>
+                        BackEnd : <br/>
+                        Node.js(Expree.js, Nest.js) / Java / MySQL / postgreSQL
                     </p>
+                    <div className="line"></div>
+                    <p>
+                        tool : <br/>
+                        Visual Studio Code / Eclipse(Spring) / Websquare5 / Nexacro
+                    </p>
+                </div>
+            </Section>
+            <Section className="section">
+                <h2>ARCHIVING</h2>
+                <ul className="linkBox">
+                    <li onClick={()=>window.open('https://github.com/tuy112/')}>
+                        <h4>github</h4>
+                        <p className="linkName">https://github.com/tuy112/</p>
+                        <p className="linkIntro">
+                            - 과거 프로젝트, 프로그램, 앱의 소스 코드<br/>
+                            - 혼자서 코딩 연습을 한 소스 코드<br/>
+                            - 부트캠프 시절 수강한 수업 과제 소스 코드
+                        </p>
                     </li>
-                    <li className="education">
-                    <h3>My Project</h3>
-                    <p><a href="./index.html"> 1. JStory 고도화 프로젝트</a></p>
-                    <p><a href="./project/bicycle/index.html"> 2. 국토종주 이야기 : 633km 국토종주 이야기 (OpenLayers)</a></p>
-                    <p><a href="./project/jboard-lv4/assets/index.html"> 3. Jboard : 게시판 CRUD</a></p>
-                    <p><a href="./project/todo/index.html">4. Jstory ASIS</a></p>
-                    <p><a href="./project/">5. coding Test 준비..!  </a></p>
-                    <p><a href="./project/manboWalk/index.html">6. team.Nivea를 소개합니다 - Python 사용  </a></p>
-                    <p><a href="./project/manboWalk/index.html">7. ChiolGram - Node.js 최종 프로젝트</a></p>
-                    <p><a href="./project/game-1/index.html">8. 내가 만든 (뼈만 있는) 첫 번째 게임 : 장애물 피하기</a></p>
-                    <p><a href="./project/game-2/index.html">9. 내가 만든 두 번째 게임 : 사무라이를 죽여라</a></p>
-                    <p><a href="./project/game-3/index.html">10. 내가 만든 세 번째 게임 : 스네이크 게임</a></p>
+                    <li onClick={()=>window.open('https://jh-healing-place.tistory.com/192')}>
+                        <h4>blog</h4>
+                        <p className="linkName">https://jh-healing-place.tistory.com/192</p>
+                    </li>
+                    <li onClick={()=>window.open('https://jelly-troodon-4ff.notion.site/JH-Kim-Frontend-Developer-4fbe032a0bde4414b4fdac9072cebcc9?pvs=4')}>
+                        <h4>notion Link</h4>
+                        <p className="linkName">https://jelly-troodon-4ff.notion.site/JH-Kim-Frontend-Developer-4fbe032a0bde4414b4fdac9072cebcc9?pvs=4</p>
                     </li>
                 </ul>
             </Section>
             <Section className="section">
-                <div class="lifeGraph">
-                    <div class="shortView">
-                        <h4>개발 Story [2021 ~ 2024]</h4>
-                        <dl>
-                            <dt>2024년</dt>
-                            <dd><strong>Jstory 고도화 프로젝트 (React.js 적용 중) </strong><em>2024년01월20일 ~ ing</em></dd>
-                            <dd><strong>정보처리기사 공부 중 (2회 필기/실기 응시 예정) </strong><em>필기 시험일 : 5월</em></dd>
-                            <dd><strong>SI (주)제타럭스시스템 계약종료 퇴사 </strong><em>2024년01월29일</em></dd>
-                        </dl>
-                        <dl>
-                            <dt>2023년</dt>
-                            <dd><strong>LX플랫폼 고도화 프로젝트 (2D 고도화) </strong><em>2023년11월6일 ~ 2024년01월26일</em></dd>
-                            <dd><strong>SI (주)제타럭스시스템 입사 </strong><em>2023년10월30일</em></dd>
-                            <dd><strong>스파르타코딩클럽 커리어톤 (취업지원 프로그램) </strong><em>2022년10월01일 ~ 2022년 11월</em></dd>
-                            <dd><strong>스파르타코딩클럽 Node.js 백엔드 과정 수료</strong><em>2023년05월 ~ 2022년09월</em></dd>
-                            <dd><strong>SI (주)지아이데이타 퇴사 </strong><em>2023년5월</em></dd>
-                        </dl>
-                        <dl>
-                            <dt>2022년</dt>
-                            <dd><strong>신한은행 통합단말 차세대프로젝트 [전환개발]</strong><em>2022년02월03일 ~ 2022년10월01일</em></dd>
-                            <dd><strong>SI (주)지아이데이타 입사 </strong><em>2022년1월</em></dd>
-                        </dl>
-                        <dl>
-                            <dt>2021년</dt>
-                            <dd><strong>21년12월31일 : 웹콘텐츠 UI/UX 디자인 & 프론트엔드 수료</strong><em>이젠 아카데미 강남점</em></dd>
-                            <dd><strong>21년07월09일 : Java Enterprise Developer 양성과정 수료</strong><em>강남대학교 산학협력단</em></dd>
-                        </dl>
-                    </div>
-                </div>
+                <h2>PROJECTS</h2>
             </Section>
         </SectionsContainer>
 
@@ -166,12 +214,6 @@ const Home = () => {
             <p>Made By FE.KimJaeHyeok</p>
         </footer>
 
-
-        <div class='box'>
-            <div class='wave -one'></div>
-            <div class='wave -two'></div>
-            <div class='wave -three'></div>
-        </div>
         </>
     );
 };

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
 
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -66,6 +67,10 @@ table {
 	visibility: hidden;
 	line-height: 0;
 }
+.line {
+    border-top: 1px solid #444444;
+    margin: 30px 0px;
+}
 
 /* ========================================================= */
 /* header + footer */
@@ -74,36 +79,36 @@ table {
     position: fixed;
     left: 0;
     right: 0;
-    top: 0;
+    top: 10px;
     z-index: 100;
 }
 #header h1 {
-    text-align: right;
     margin-right: 15px;
     position: absolute;
     top: 10px;
-    right: 0;
-}
-#header h1 a {
+    left: 10px;
     font-size: 25px;
     font-weight: 600;
     transition: 0.5s;
 }
-#header h1 a:hover {
-    font-size: 30px;
+#header h1 span {
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 10px;
+}
+#header h1:hover {
+    font-size: 27px;
 }
 #header .menu {
-    margin-left: 20px;
-    margin-top: 15px;
     z-index: 1000;
-
     position: relative;
     width: 25px;
     height: 30px;
     cursor: pointer;
+    right: 20px;
+    top: 10px;
   }
-#header .menu,
-.menu.active .bar {
+#header .menu, .menu.active .bar {
     position: absolute;
 }
 .menu.active .bar:nth-child(2) {
@@ -117,7 +122,6 @@ table {
     top: 25%;
     transform: rotate(-45deg);
 }
-
 #header .menu .bar {
     width: 25px;
     height: 3px;
@@ -126,13 +130,12 @@ table {
     transition: 0.3s;
 }
 
-
 /* header 메뉴 */  
 .navBar {
     position: fixed;
     top: 0;
-    left: 0;
-    /* opacity: 0.7; */
+    right: 10px;
+    opacity: 0.9;
     background: #ededed;
     border-radius: 20px;
     padding: 30px;

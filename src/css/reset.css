@@ -212,3 +212,11 @@ table {
     padding-right: 10px;
     font-weight: 600;
 }
+
+/* goTop 버튼 */
+.goTop {
+    border: 1px solid #ededed;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}

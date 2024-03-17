@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import '../css/reset.css';
 import '../css/sub.css';
+
+// image
 import me from '../images/about_man.png';
 
 const Profile = () => {

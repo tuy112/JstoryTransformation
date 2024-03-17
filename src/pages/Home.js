@@ -92,8 +92,8 @@ const Home = () => {
                 <div className="dashBoard">
                     <p className="koreanIntro">
                         <a className="hello">안녕하세요.</a>제 이름은 <a className="hello">김재혁!</a><br/>
-                        <a className="highlight type1">훗날</a> 개발자하면 <a className="highlight type2">모두가</a> 인정할<br/>
-                        백 개발이 가능한<a class="highlight type3"> 프론트엔드 개발자</a>입니다.
+                        <a className="highlight type1">훗날</a> 프론트와 백 <a className="highlight type2">모두</a> 개발 가능할<br/>
+                        퍼블리싱이 취미인<a class="highlight type3"> 프론트엔드 개발자</a>입니다.
                     </p>
                     <p className="englishIntro">
                         Hello Company!<br/>
@@ -113,47 +113,59 @@ const Home = () => {
                     <ul className="topBox">
                         <li>
                             <div className="detailBox">
-                                <IoPerson size="40"/>
-                                <p>이름</p>
-                                <p>김재혁</p>
+                                <div className="txtBox">
+                                    <IoPerson size="40"/>
+                                    <p>이름</p>
+                                    <p>김재혁</p>
+                                </div>
                             </div>
                         </li>
                         <li>
                             <div className="detailBox">
-                                <IoFitness size="40"/>
-                                <p>생년월일</p>
-                                <p>96.01.10</p>
+                                <div className="txtBox">
+                                    <IoFitness size="40"/>
+                                    <p>생년월일</p>
+                                    <p>96.01.10</p>
+                                </div>
                             </div>
                         </li>
                         <li>
                             <div className="detailBox">
-                                <IoLocation size="40"/>
-                                <p>주소지</p>
-                                <p>경기도 수원시 영통구 광교2동</p>
+                                <div className="txtBox">
+                                    <IoLocation size="40"/>
+                                    <p>주소지</p>
+                                    <p>경기도 수원시 영통구 광교2동</p>
+                                </div>
                             </div>
                         </li>
                     </ul>
                     <ul className="bottomBox">
                         <li>
                             <div className="detailBox">
-                                <IoCallOutline size="40"/>
-                                <p>연락처</p>
-                                <p>010-4652-9973</p>
+                                <div className="txtBox">
+                                    <IoCallOutline size="40"/>
+                                    <p>연락처</p>
+                                    <p>010-4652-9973</p>
+                                </div>
                             </div>
                         </li>
                         <li>
                             <div className="detailBox">
-                                <IoMailOutline size="40"/>
-                                <p>이메일</p>
-                                <p>master_catch@naver.com</p>
+                                <div className="txtBox">
+                                    <IoMailOutline size="40"/>
+                                    <p>이메일</p>
+                                    <p>master_catch@naver.com</p>
+                                </div>
                             </div>
                         </li>
                         <li>
                             <div className="detailBox">
+                                <div className="txtBox">
                                 <IoDesktopOutline size="40"/>
-                                <p>경력</p>
-                                <p>(주)지아이데이타</p>
-                                <p>(주)제타럭스시스템</p>
+                                    <p>경력</p>
+                                    <p>(주)지아이데이타</p>
+                                    <p>(주)제타럭스시스템</p>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -203,9 +215,17 @@ const Home = () => {
                         <p className="linkName">https://jelly-troodon-4ff.notion.site/JH-Kim-Frontend-Developer-4fbe032a0bde4414b4fdac9072cebcc9?pvs=4</p>
                     </li>
                 </ul>
+                <div class="signFlow">
+                    <p>위 박스들을 클릭하세요 :&#41;</p>
+                </div>
             </Section>
             <Section className="section">
                 <h2>PROJECTS</h2>
+                <Link to = "/project">
+                    <div className="goProject">
+                        <p>Go Project!!</p>
+                    </div>
+                </Link>
             </Section>
         </SectionsContainer>
 
@@ -214,6 +234,8 @@ const Home = () => {
             <p>Made By FE.KimJaeHyeok</p>
         </footer>
 
+        {/* 맨 위로! */}
+        <div className="goTop"></div>
         </>
     );
 };

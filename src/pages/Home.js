@@ -72,7 +72,7 @@ const Home = () => {
                     <li><Link to = "/">Home</Link></li>
                     <li><Link to = "/profile">Profile</Link></li>
                     <li><Link to = "/project">Project</Link></li>
-                    <li><Link to = "/bikeTour">633KM 자전거국종이야기</Link></li>
+                    <li><Link to = "https://github.com/tuy112/bicycleTour">633KM 자전거국종이야기</Link></li>
                     <li><a href="https://jelly-troodon-4ff.notion.site/JH_Recorder-2024-ac2bd8b5635940fe82c9d95fd2886ee2?pvs=4">JH Notion Recorder</a></li>
                     <li><a href="https://jh-healing-place.tistory.com/">Jstol Blog</a></li>
                     <li><a href="#">JGAME</a></li>

@@ -6,7 +6,6 @@ import Profile from './pages/Profile';
 import Project from './pages/Project';
 import Jboard from './pages/Jboard';
 import Three from './project/three'
-// import BikeTour from './pages/bikeTour/index.html';
 
 const App = () => {
 

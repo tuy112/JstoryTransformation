@@ -97,7 +97,7 @@ const Project = () => {
                         <div className="program">
                             <p>
                                 1. 스파르타코딩클럽 Node.js백엔드 과정<br/>
-                                -강남대학교 산학협력단 주관 ( 1000시간 )
+                                - (주)스파르타 ( 1300시간 )
                             </p>
                             <p>    
                                 2. 웹콘텐츠 UI/UX 디자인 & 프론트앤드(React.js)<br/>

@@ -4,7 +4,7 @@ import { SectionsContainer, Section } from 'react-fullpage';
 
 import '../css/reset.css';
 import '../css/main.css';
-import '../css/phone.css';
+import '../css/mobile.css';
 import scrollDown from '../images/scrollDown.jpg';
 
 // icon
@@ -213,7 +213,7 @@ const Home = () => {
                         <p className="linkIntro">
                             - til + wil 기록공간<br/>
                             - 나만의 개발 메모장<br/>
-                            - 등등 다양한 이야기
+                            - 등등 다양한 이야기 
                         </p>
                     </li>
                     <li onClick={()=>window.open('https://jelly-troodon-4ff.notion.site/JH-Kim-Frontend-Developer-4fbe032a0bde4414b4fdac9072cebcc9?pvs=4')}>

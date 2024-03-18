@@ -184,9 +184,8 @@
 }
 .linkBox {
     display: flex;
-    justify-content: center;
     justify-content: space-around;
-    margin-top: 180px;
+    margin-top: 200px;
 }
 .linkBox li {
     border: 1px solid #333;

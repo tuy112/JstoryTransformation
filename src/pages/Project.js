@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import '../css/reset.css';
 import '../css/sub.css';
+import '../css/phone.css';
 
 const Project = () => {
     // empty

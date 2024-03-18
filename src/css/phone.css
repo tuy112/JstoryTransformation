@@ -1,0 +1,118 @@
+/* 1081px */
+@media (max-width: 1154px) {
+    .section:nth-child(4) {
+        text-align: center;
+    }
+    .linkBox {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+}
+
+/* 모바일 반응형 */
+@media (max-width: 776px) {
+    /* header */
+    #header h1 {
+        font-size: 20px;
+    }
+    .navBar {
+        width: 250px;
+    }
+    .navBar .gnb li a {
+        font-size: 16px;
+    }
+    .navBar .jboard li {
+        font-size: 13px;
+    }
+
+    /* section1 - intro */
+    .dashBoard {
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 450px;
+        overflow-x: hidden;
+    }
+    .dashBoard .koreanIntro {
+        font-size: 20px;
+    }
+    .dashBoard .koreanIntro .hello {
+        font-size: 25px;
+    }
+    .dashBoard .koreanIntro .highlight {
+        font-size: 25px;
+    }
+    .dashBoard .englishIntro {
+        font-size: 12px;
+        text-align: left;
+    }
+
+    /* section2 - about me */
+    .section:nth-child(2) h2 {
+        font-size: 25px;
+    }
+    .detailBox {
+        width: 130px;
+    }
+    .detailBox .txtBox {
+        font-size: 11px;
+    }
+
+    /* section3 - about me */
+    .skillBox {
+        width: 420px;
+        height: 320px;
+    }
+    .skillBox p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    /* section4 - linkBox */
+    .linkBox {
+        display: inline-block;
+        justify-content: ;
+        margin: 0 auto;
+        margin-left: 20px;
+        
+    }
+    .linkBox li {
+        height: 150px;
+    }
+    .signFlow p {
+        font-size: 15px;
+        text-align: left;
+        margin-left: 30px;
+        margin-top: 60px;
+    }
+    /* section5 - goProject */
+    .goProject {
+        margin-top: 600px;
+        border-radius: 10px;
+    }
+
+    /* ========================================================= */
+    /* project */
+    .projectBox {
+        width: 300px;
+        margin: 0 auto;
+    }
+    .projectDetailBox {
+        width: 250px;
+    }
+    .projectDetailBox p {
+        font-size: 14px;
+    }
+    .education h2 {
+        font-size: 23px;
+    }
+    .education .program {
+        width: 250px;
+    }
+    .education .program p {
+        font-size: 14px;
+    }
+  }
+
+  

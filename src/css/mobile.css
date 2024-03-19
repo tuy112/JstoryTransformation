@@ -72,21 +72,30 @@
     .dashBoard {
         width: 300px;
         margin: 0 auto;
-        margin-top: 250px;
+        margin-top: 180px;
         overflow-x: hidden;
     }
     .dashBoard .koreanIntro {
-        font-size: 20px;
+        font-size: 19px;
     }
     .dashBoard .koreanIntro .hello {
-        font-size: 25px;
+        font-size: 24px;
     }
     .dashBoard .koreanIntro .highlight {
-        font-size: 25px;
+        font-size: 24px;
     }
     .dashBoard .englishIntro {
-        font-size: 12px;
+        font-size: 10px;
         text-align: left;
+    }
+    .scroll img { 
+        width: 50px; 
+        height: 30px; 
+        margin-right: 50px;
+    }
+    @keyframes ani {
+        0% { top: 18%; }
+        100% { top: 17%; }
     }
 
     /* section2 - about me */

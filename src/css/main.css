@@ -209,7 +209,7 @@
 .linkBox li h4 {
     font-size: 25px;
     font-weight: 600;
-    text-align-last: left;
+    text-align: left;
 }
 .linkBox li .linkName {
     color: #7474da;
@@ -218,7 +218,7 @@
 }
 .linkBox li .linkIntro {
     text-align: left;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 .signFlow {

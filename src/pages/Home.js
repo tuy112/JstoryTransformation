@@ -83,6 +83,7 @@ const Home = () => {
                     <li><Link to = "/jboard">게시판</Link></li>
                     <li><Link to = "/three">3D공간</Link></li>
                     <li><Link to = "#">실시간 채팅하기</Link></li>
+                    <li><Link to = "/codingRoom">코딩테스트준비</Link></li>
                 </ul>
             </div>
         </header>
@@ -219,6 +220,9 @@ const Home = () => {
                     <li onClick={()=>window.open('https://jelly-troodon-4ff.notion.site/JH-Kim-Frontend-Developer-4fbe032a0bde4414b4fdac9072cebcc9?pvs=4')}>
                         <h4>notion Link</h4>
                         <p className="linkName">https://jelly-troodon-4ff.notion.site/JH-Kim-Frontend-Developer-4fbe032a0bde4414b4fdac9072cebcc9?pvs=4</p>
+                        <p className="linkIntro">
+                            - 노션 이력서 
+                        </p>
                     </li>
                 </ul>
                 <div class="signFlow">

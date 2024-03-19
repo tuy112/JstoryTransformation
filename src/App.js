@@ -1,11 +1,18 @@
 import React from "react";
 import { Routes , Route } from "react-router-dom";
 
+// Jstory
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Project from './pages/Project';
-import Jboard from './pages/Jboard';
-import Three from './project/three'
+
+// login
+import Login from './pages/Login';
+
+// Projects
+import Jboard from './project/Jboard';
+import Three from './project/Three';
+import CodingRoom from './project/CodingRoom';
 
 const App = () => {
 
@@ -16,10 +23,14 @@ const App = () => {
       {/* pages */}
       <Route path="/profile" element={<Profile/>}></Route>
       <Route path="/project" element={<Project/>}></Route>
-      <Route path="/jboard" element={<Jboard/>}></Route>
+
+      {/* signUp + login */}
+      <Route path="/login" element={<Login/>}></Route>
 
       {/* project */}
+      <Route path="/jboard" element={<Jboard/>}></Route>
       <Route path="/three" element={<Three/>}></Route>
+      <Route path="/codingRoom" element={<CodingRoom/>}></Route>
     </Routes>
   );
 }

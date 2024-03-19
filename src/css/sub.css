@@ -46,9 +46,7 @@
 
 /* ==================================================== */
 /* project */
-.projectBox {
-    text-align: center;
-}
+.projectBox {}
 .projectBox h2 {
     text-align: center;
     font-weight: 500;

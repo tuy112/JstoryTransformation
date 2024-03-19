@@ -1,4 +1,4 @@
-/* 1081px */
+/* 1154px */
 @media (max-width: 1154px) {
     .section:nth-child(4) {
         text-align: center;
@@ -6,8 +6,32 @@
     .linkBox {
         display: inline-block;
         vertical-align: middle;
-        margin-left: 20px;
-        margin-top: 20px;
+        margin-top: 0;
+    }
+    .linkBox li:last-child {
+        margin-left: 0;
+    }
+    .linkBox li {
+        height: 150px;
+        width: 250px;
+        height: 130px;
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+    .linkBox li h4 {
+        font-size: 16px;
+    }
+    .linkName {
+        font-size: 13px;
+    }
+    .linkIntro {
+        font-size: 13px;
+    }
+    .signFlow p {
+        font-size: 15px;
+        text-align: left;
+        margin-left: 30px;
+        margin-top: 10px;
     }
 }
 
@@ -77,12 +101,25 @@
     }
     .linkBox li {
         height: 150px;
+        width: 250px;
+        height: 125px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .linkBox li h4 {
+        font-size: 16px;
+    }
+    .linkName {
+        font-size: 13px;
+    }
+    .linkIntro {
+        font-size: 13px;
     }
     .signFlow p {
         font-size: 15px;
         text-align: left;
         margin-left: 30px;
-        margin-top: 60px;
+        margin-top: 30px;
     }
 
     /* section5 - goProject */
@@ -93,24 +130,28 @@
 
     /* ========================================================= */
     /* project */
-    .projectBox {
-        width: 300px;
-        margin: 0 auto;
-    }
+    .projectBox {}
     .projectDetailBox {
-        width: 250px;
+        padding: 20px;
+        width: 200px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        border-radius: 10px;
     }
     .projectDetailBox p {
-        font-size: 14px;
+        font-size: 11px;
     }
     .education h2 {
         font-size: 23px;
     }
     .education .program {
-        width: 250px;
+        border: 3px solid #111;
+        width: 200px;
+        margin: 0 auto;
+        padding: 30px;
     }
     .education .program p {
-        font-size: 14px;
+        font-size: 11px;
     }
   }
 

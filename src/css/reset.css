@@ -71,6 +71,12 @@ table {
     border-top: 1px solid #444444;
     margin: 30px 0px;
 }
+.goTop {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+}
 
 /* ========================================================= */
 /* header + footer */
@@ -184,7 +190,7 @@ table {
 .navBar .jboard li:nth-child(1) {
     margin-left: 25px;
 }
-.navBar .jboard li:nth-child(2),li:nth-child(3) {
+.navBar .jboard li:nth-child(2),li:nth-child(3),li:nth-child(4) {
     margin-left: 10px;
 }
 .navBar .jboard li a {

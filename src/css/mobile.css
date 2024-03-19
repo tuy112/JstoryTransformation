@@ -1,5 +1,10 @@
 /* 1154px */
 @media (max-width: 1154px) {
+    /* 공통 */
+    .section h2 {
+        font-size: 25px;
+        margin-bottom: 35px;
+    }
     .section:nth-child(4) {
         text-align: center;
     }
@@ -12,31 +17,40 @@
         margin-left: 0;
     }
     .linkBox li {
-        height: 150px;
-        width: 250px;
-        height: 130px;
+        width: 230px;
+        height: 110px;
         padding: 20px;
         margin-bottom: 15px;
     }
     .linkBox li h4 {
-        font-size: 16px;
+        font-size: 14px;
     }
     .linkName {
-        font-size: 13px;
+        font-size: 11px;
     }
     .linkIntro {
-        font-size: 13px;
+        font-size: 11px;
     }
     .signFlow p {
-        font-size: 15px;
+        font-size: 13px;
         text-align: left;
         margin-left: 30px;
-        margin-top: 10px;
+        margin-top: 5px;
+    }
+
+    .goProject {
+        margin-top: 200px;
     }
 }
 
 /* 모바일 반응형 */
 @media (max-width: 776px) {
+    /* 모바일 공통 */
+    .section h2 {
+        font-size: 25px;
+        margin-bottom: 35px;
+    }
+
     /* header */
     #header h1 {
         font-size: 20px;
@@ -58,7 +72,7 @@
     .dashBoard {
         width: 300px;
         margin: 0 auto;
-        margin-top: 450px;
+        margin-top: 250px;
         overflow-x: hidden;
     }
     .dashBoard .koreanIntro {
@@ -76,20 +90,29 @@
     }
 
     /* section2 - about me */
-    .section:nth-child(2) h2 {
-        font-size: 25px;
-    }
     .detailBox {
-        width: 130px;
+        width: 90px;
+        height: 150px;
     }
     .detailBox .txtBox {
-        font-size: 11px;
+        font-size: 9px;
+        margin-top: 40px;
+    }
+    .outsideWork {
+        width: 85%;
+        padding: 5px;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    .outsideWork p {
+        font-size: 9px;
     }
 
     /* section3 - about me */
     .skillBox {
-        width: 420px;
-        height: 320px;
+        width: 300px;
+        height: 360px;
+        margin-top: 60px;
     }
     .skillBox p {
         font-size: 14px;
@@ -105,57 +128,28 @@
     .linkBox li {
         height: 150px;
         width: 250px;
-        height: 125px;
+        height: 90px;
         padding: 20px;
         margin-bottom: 20px;
     }
     .linkBox li h4 {
-        font-size: 16px;
+        font-size: 12px;
     }
     .linkName {
-        font-size: 13px;
+        font-size: 10px;
     }
     .linkIntro {
-        font-size: 13px;
+        font-size: 10px;
     }
     .signFlow p {
-        font-size: 15px;
-        text-align: left;
-        margin-left: 30px;
-        margin-top: 30px;
+        font-size: 10px;
+        text-align: right;
+        margin-top: 15px;
     }
 
     /* section5 - goProject */
     .goProject {
-        margin-top: 600px;
         border-radius: 10px;
-    }
-
-    /* ========================================================= */
-    /* project */
-    .projectBox {}
-    .projectDetailBox {
-        padding: 20px;
         width: 200px;
-        margin: 0 auto;
-        margin-bottom: 40px;
-        border-radius: 10px;
-    }
-    .projectDetailBox p {
-        font-size: 11px;
-    }
-    .education h2 {
-        font-size: 23px;
-    }
-    .education .program {
-        border: 3px solid #111;
-        width: 200px;
-        margin: 0 auto;
-        padding: 30px;
-    }
-    .education .program p {
-        font-size: 11px;
     }
   }
-
-  

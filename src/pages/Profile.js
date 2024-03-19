@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import '../css/reset.css';
 import '../css/sub.css';
+import '../css/mobile.css';
 
 // image
 import me from '../images/about_man.png';

@@ -39,23 +39,25 @@ const Profile = () => {
                     <div className="bar"></div>
                     <div className="bar"></div>
                 </div>
-                <h1><Link to = "/" >Jstory</Link></h1>
+                <h1><Link to = "/" >KJH Portfolio</Link><span>- Jstory</span></h1>
 
                 <div className="navBar" id="navBar">
-                <ul className="gnb">
-                    <li><Link to = "/">Home</Link></li>
-                    <li><Link to = "/profile">Profile</Link></li>
-                    <li><Link to = "/project">Project</Link></li>
-                    <li><Link to = "/bikeTour">633KM 자전거국종이야기</Link></li>
-                    <li><a href="https://jelly-troodon-4ff.notion.site/JH_Recorder-2024-ac2bd8b5635940fe82c9d95fd2886ee2?pvs=4">JH Notion Recorder</a></li>
-                    <li><a href="https://jh-healing-place.tistory.com/">Jstol Blog</a></li>
-                    <li><a href="#">JGAME</a></li>
-                </ul>
+                    <ul className="gnb">
+                        <li><Link to = "/">Home</Link></li>
+                        <li><Link to = "/profile">Profile</Link></li>
+                        <li><Link to = "/project">Project</Link></li>
+                        <li><Link to = "https://github.com/tuy112/bicycleTour">633KM 자전거국종이야기</Link></li>
+                        <li><Link to="https://github.com/tuy112/gisDev">BAC100기록방(GIS개발)</Link></li>
+                        <li><Link to="https://jh-healing-place.tistory.com/">티스토리Blog</Link></li>
+                        <li><Link to="https://github.com/tuy112/kimIntro">포트폴리오 VER.2</Link></li>
+                    </ul>
 
-                <ul className="jboard">
-                    <li><Link to = "/jboard">게시판</Link></li>
-                    <li><a href="#">실시간 채팅</a></li>
-                </ul>
+                    <ul className="jboard">
+                        <li><Link to = "/jboard">게시판</Link></li>
+                        <li><Link to = "/three">3D공간</Link></li>
+                        <li><Link to = "https://github.com/tuy112/jstolTodoList">TODOLIST</Link></li>
+                        <li><Link to = "/codingRoom">코딩테스트준비</Link></li>
+                    </ul>
                 </div>
             </header>
 

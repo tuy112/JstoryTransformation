@@ -93,9 +93,9 @@ const Home = () => {
             <Section className='section'>
                 <div className="dashBoard">
                     <p className="koreanIntro">
-                        <a className="hello">안녕하세요.</a>제 이름은 <a className="hello">김재혁!</a><br/>
-                        <a className="highlight type1">훗날</a> 프론트와 백 <a className="highlight type2">모두</a> 개발 가능할<br/>
-                        퍼블리싱이 취미인<a class="highlight type3"> 프론트엔드 개발자</a>입니다.
+                        <a className="hello">안녕하세요.</a>Java 개발경력이 있는 Node.js 개발자, <a className="hello">김재혁입니다!</a><br/>
+                        <a className="highlight type1">Eclipse와 VScode를</a> 사용할 수 있으며 <a className="highlight type2">Git과 SVN을</a> 사용해서<br/>
+                        형상관리가 가능합니다.<a class="highlight type3">  감사</a>합니다.
                     </p>
                     <p className="englishIntro">
                         Hello Company!<br/>
@@ -217,9 +217,9 @@ const Home = () => {
                             - 등등 다양한 이야기 
                         </p>
                     </li>
-                    <li onClick={()=>window.open('https://jelly-troodon-4ff.notion.site/JH-Kim-Frontend-Developer-4fbe032a0bde4414b4fdac9072cebcc9?pvs=4')}>
+                    <li onClick={()=>window.open('https://jelly-troodon-4ff.notion.site/Software-Developer-Kim-Jae-Hyeok-be4b14ad09ed4da5bd038c364109e8b4?pvs=4')}>
                         <h4>notion Link</h4>
-                        <p className="linkName">https://jelly-troodon-4ff.notion.site/JH-Kim-Frontend-Developer-4fbe032a0bde4414b4fdac9072cebcc9?pvs=4</p>
+                        <p className="linkName">https://jelly-troodon-4ff.notion.site/Software-Developer-Kim-Jae-Hyeok-be4b14ad09ed4da5bd038c364109e8b4?pvs=4</p>
                         <p className="linkIntro">
                             - 노션 이력서 
                         </p>

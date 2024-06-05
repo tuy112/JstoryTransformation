@@ -3,7 +3,13 @@
     /* 공통 */
     .section h2 {
         font-size: 25px;
-        margin-bottom: 35px;
+        margin-bottom: 250px;
+    }
+    .section:nth-child(2) h2 {
+        margin-bottom: 80px;
+    }
+    .section:nth-child(4) h2 {
+        margin-bottom: 90px;
     }
     .section:nth-child(4) {
         text-align: center;
@@ -48,7 +54,7 @@
     /* 모바일 공통 */
     .section h2 {
         font-size: 25px;
-        margin-bottom: 35px;
+        margin-bottom: 150px;
     }
 
     /* header */

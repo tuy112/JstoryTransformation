@@ -93,9 +93,9 @@ const Home = () => {
             <Section className='section'>
                 <div className="dashBoard">
                     <p className="koreanIntro">
-                        <a className="hello">안녕하세요.</a>Java 개발경력이 있는 Node.js 개발자, <a className="hello">김재혁입니다!</a><br/>
+                        <a className="hello">안녕하세요.</a>Java 경력이 있는 Node.js 개발자, <a className="hello">김재혁입니다!</a><br/>
                         <a className="highlight type1">Eclipse와 VScode를</a> 사용할 수 있으며 <a className="highlight type2">Git과 SVN을</a> 사용해서<br/>
-                        형상관리가 가능합니다.<a class="highlight type3">  감사</a>합니다.
+                        형상관리가 가능합니다.<a class="highlight type3">  감사합니다.</a>
                     </p>
                     <p className="englishIntro">
                         Hello Company!<br/>

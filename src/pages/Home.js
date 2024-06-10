@@ -66,7 +66,7 @@ const Home = () => {
                 <div className="bar"></div>
                 <div className="bar"></div>
             </div>
-            <h1><Link to = "/" >KJH Portfolio</Link><span>- Jstory</span></h1>
+            <h1><Link to = "/" className="h1" >KJH Portfolio</Link><span>- Jstory</span></h1>
 
             <div className="navBar" id="navBar">
                 <ul className="gnb">
@@ -86,7 +86,7 @@ const Home = () => {
                     <li><Link to = "/codingRoom">코딩테스트준비</Link></li>
                 </ul>
             </div>
-        </header>
+    </header>
 
         {/* body */}
         <SectionsContainer {...options}>

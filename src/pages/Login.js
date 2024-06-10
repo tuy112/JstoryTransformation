@@ -4,7 +4,7 @@ const login = () => {
     
 
     return(
-        <></>
+        <div id="wrap"></div>
     );
 }
 

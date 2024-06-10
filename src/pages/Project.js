@@ -15,7 +15,7 @@ const Project = () => {
     }, []);
 
     return (
-        <>
+        <div id="wrap">
             {/* 본문 바로가기 */}
             <p id="skipNav" class="hide"><a href="./index.html">본문 바로가기</a></p>
 
@@ -117,7 +117,7 @@ const Project = () => {
             <footer id="footer">
                 <p>Made By FE.KimJaeHyeok</p>
             </footer>
-        </>
+        </div>
     );
 }
 

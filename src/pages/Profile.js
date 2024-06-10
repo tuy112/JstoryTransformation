@@ -28,7 +28,7 @@ const Profile = () => {
     }, []);
 
     return (
-        <>
+        <div id="wrap">
             {/* 본문 바로가기 */}
             <p id="skipNav" className="hide"><a href="./index.html">본문 바로가기</a></p>
 
@@ -136,7 +136,7 @@ const Profile = () => {
             <footer id="footer">
                 <p>Made By FE.KimJaeHyeok</p>
             </footer>
-        </>
+        </div>
     );
 }
 

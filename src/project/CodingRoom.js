@@ -5,7 +5,7 @@ const codingRoom = () => {
     console.log('지금은 코테 연습중...');
 
     return(
-        <></>
+        <div id="wrap"></div>
     );
 }
 

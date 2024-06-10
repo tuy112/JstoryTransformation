@@ -24,7 +24,7 @@ const Jboard = () => {
     }, []);
     
     return (
-        <>
+        <div id="wrap">
             <header id="header">
                 <div className="inner">
                     <div className="menu menuIcon" onClick={ hamburgerMenu }>
@@ -95,7 +95,7 @@ const Jboard = () => {
             <footer id="footer">
                 <p>Made By FE.KimJaeHyeok</p>
             </footer>
-        </>
+        </div>
     )
 }
 

@@ -10,6 +10,8 @@ Github 링크 : https://github.com/tuy112/Jstory
 
 2. Java - React 연동 성공 (프론트-localhost:3000/백-10047)
 
+백엔드 작업 링크 : https://github.com/tuy112/Jstory-Java
+
 3. 화면설계서(PPT) + 연동규격서(XLSX) 제작 후 엑셀 다운로드 버튼 추가<br/> (개발중)
 
 4. map.js (OpenLayers)를 이용해서 "산 기록방" 페이지 제작 [지도 위에 점 표시]

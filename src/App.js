@@ -2,17 +2,16 @@ import React from "react";
 import { Routes , Route } from "react-router-dom";
 
 // Jstory
-import Home from './pages/Home';
-import Profile from './pages/Profile';
-import Project from './pages/Project';
-
+import Home from './templates/pages/Home';
+import Profile from './templates/pages/Profile';
+import Project from './templates/pages/Project';
+import Qna from './templates/pages/Qna';
 // login
-import Login from './pages/Login';
-
+import Login from './templates/pages/Login';
 // Projects
-import Jboard from './project/Jboard';
-import Three from './project/Three';
-import CodingRoom from './project/CodingRoom';
+import Todo from './templates/projects/todo/Todo';
+import Mountain from './templates/projects/mountain/Mountain';
+import JGame from './templates/projects/game/JGame';
 
 const App = () => {
 
@@ -23,14 +22,15 @@ const App = () => {
       {/* pages */}
       <Route path="/profile" element={<Profile/>}></Route>
       <Route path="/project" element={<Project/>}></Route>
+      <Route path="/qna" element={<Qna/>}></Route>
 
       {/* signUp + login */}
       <Route path="/login" element={<Login/>}></Route>
 
       {/* project */}
-      <Route path="/jboard" element={<Jboard/>}></Route>
-      <Route path="/three" element={<Three/>}></Route>
-      <Route path="/codingRoom" element={<CodingRoom/>}></Route>
+      <Route path="/todo" element={<Todo/>}></Route>
+      <Route path="/mountain" element={<Mountain/>}></Route>
+      <Route path="/jGame" element={<JGame/>}></Route>
     </Routes>
   );
 }

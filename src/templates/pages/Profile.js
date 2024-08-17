@@ -113,9 +113,7 @@ const Profile = () => {
                                 <div className="txt-box">
                                 <IoDesktopOutline size="20"/>
                                     <p>프로젝트 경험</p>
-                                    <p>1.LGU+ 관리자(Admin) 페이지 현대화 프로젝트</p><br/>
-                                    <p>LX (한국국토정보공사) 플랫폼 고도화 프로젝트</p><br/>
-                                    <p>신한은행 통합단말 차세대프로젝트</p>
+                                    <p>:프로젝트 페이지에서..</p>
                                 </div>
                             </div>
                         </li>

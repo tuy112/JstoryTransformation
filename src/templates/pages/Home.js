@@ -83,8 +83,8 @@ const Home = () => {
 
                         <div className="box-item item3" onClick={() => navigate('/')}>
                             <div className="box-front">
-                                <h3>페이지3</h3>
-                                <p>미정</p>
+                                <h3>JH Record Page</h3>
+                                <p>나만의공부방 + 운동기록</p>
                             </div>
                             <div className="box-back">
                                 <p>Click to Visit Page 3</p>

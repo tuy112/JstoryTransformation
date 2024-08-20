@@ -71,7 +71,7 @@ const Project = () => {
                 <div className="projectBox project">
                     <div className="inner">
                         <div className="projectTxt">
-                            {/* <h2>PROJECT <em>[ 아래 항목을 클릭해주세요 ]</em></h2>
+                            <h2>PROJECT <em>[ 아래 항목을 클릭해주세요 ]</em></h2>
                             <div className="projectDetailBox">
                                 <p>
                                     ☆ 3 <br/>
@@ -126,10 +126,10 @@ const Project = () => {
                                     [ 관련 링크 클릭 ==》 <a href="https://byline.network/2021/01/21-119/">신한은행 통합단말 관련 기사</a> ]
 
                                 </p>
-                            </div> */}
+                            </div>
 
                             {/* springBoot 연동완료 */}
-                            <div className="projectBox project">
+                            {/* <div className="projectBox project">
                                 <div className="inner">
                                     <div className="projectTxt">
                                         <h2>PROJECT <em>[ 아래 항목을 클릭해주세요 ]</em></h2>
@@ -153,7 +153,7 @@ const Project = () => {
                                         ))}
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
 
                         </div>

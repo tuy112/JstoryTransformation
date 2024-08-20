@@ -4,13 +4,19 @@ Github 링크 : https://github.com/tuy112/Jstory
 
 # Jstory TOBE
 
+👉 배포 페이지 : https://tuy112.github.io
+
+최신 업데이트 날짜 : 2024.08.20
+
+최신 릴리즈 버전 : ver 0.2.1
+
 ### Jstory 고도화 프로젝트 주요 내용
 
 1. 리액트 적용
 
 2. Java - React 연동 성공 (프론트-localhost:3000/백-10047)
 
-백엔드 작업 링크 : https://github.com/tuy112/Jstory-Java
+👉 백엔드 작업 링크 : https://github.com/tuy112/Jstory-Java
 
 3. 화면설계서(PPT) + 연동규격서(XLSX) 제작 후 엑셀 다운로드 버튼 추가<br/> (개발중)
 
@@ -23,3 +29,7 @@ Github 링크 : https://github.com/tuy112/Jstory
 7. JGame이라는 페이지 신규 추가 ( 내가 만든 게임 모음 페이지 )
 
 8. QNA라는 게시판 및 실시간 채팅 페이지 신규 추가 ( Java )
+
+
+### Tools
+<u></u>

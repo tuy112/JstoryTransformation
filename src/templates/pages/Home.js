@@ -42,7 +42,6 @@ const Home = () => {
                         <li><Link to = "/">Home</Link></li>
                         <li><Link to = "/profile">Profile</Link></li>
                         <li><Link to = "/project">Project</Link></li>
-                        <li><Link to = "/todo">[SideProject] TODOLIST</Link></li>
                         <li><Link to="/mountain">[SideProject] 등산 기록방</Link></li>
                         <li><Link to="/jGame">[SideProject] JWorld(게임)</Link></li>
                     </ul>
@@ -81,10 +80,10 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="box-item item3" onClick={() => navigate('/')}>
+                        <div className="box-item item3" onClick={() => navigate('/todo')}>
                             <div className="box-front">
-                                <h3>JH Record Page</h3>
-                                <p>나만의공부방 + 운동기록</p>
+                                <h3>TODOLIST</h3>
+                                <p>나만의공부방<br/> + <br/>운동기록</p>
                             </div>
                             <div className="box-back">
                                 <p>Click to Visit Page 3</p>

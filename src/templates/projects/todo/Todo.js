@@ -1,11 +1,14 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import { IoArrowBack, IoAddOutline } from "react-icons/io5";
 
 import '../../../static/css/common/reset.css';
 import '../../../static/css/todo/todo.css';
 
 const Todo = () => {
+    // 백 데이터 가져오기
+    const [data, setData] = useState([]);
+
     // 1. header 토글 버튼 기능
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => {
@@ -79,6 +82,16 @@ const Todo = () => {
         setSelectedRecords([]);
     };
 
+    useEffect(() => {
+        fetch("/todoList")
+            .then((res) => {
+              return res.json();
+            })
+            .then(function (result) {
+                setData(result);
+          })
+      },[]);
+
     return (
         <div id="wrap">
             {/* header */}
@@ -99,6 +112,8 @@ const Todo = () => {
                         <li><Link to = "/">Home</Link></li>
                         <li><Link to = "/profile">Profile</Link></li>
                         <li><Link to = "/project">Project</Link></li>
+                        <li><Link to="/link">[SideProject] JH TODOLIST</Link></li>
+                        <li><Link to="/qna">[SideProject] QNA</Link></li>
                         <li><Link to="/mountain">[SideProject] 등산 기록방</Link></li>
                         <li><Link to="/jGame">[SideProject] JWorld(게임)</Link></li>
                     </ul>
@@ -229,7 +244,6 @@ const Todo = () => {
                         </div>
                     </div>
                 </div>
-
                 
             </section>
         </div>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from "prop-types";
 
 // icon
-import { IoAppsSharp } from "react-icons/io5";
+import { IoArrowBack } from "react-icons/io5";
 
 import '../../static/css/common/reset.css';
 import '../../static/css/common/common.css';
@@ -29,7 +29,7 @@ const Qna = (props) => {
                 </h1>
 
                 <button className="hamburger-menu" onClick={toggleMenu}>
-                    <IoAppsSharp size={21}/>
+                    <IoArrowBack size={21}/>
 	            </button>
                 
                 <div className={`side-menu ${isOpen ? 'open' : ''}`} id="sideMenu">

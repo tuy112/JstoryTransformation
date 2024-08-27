@@ -19,6 +19,7 @@ const Todo = () => {
     const [weight, setWeight] = useState('');
     const [exerciseHours, setExerciseHours] = useState('');
     const [records, setRecords] = useState([]);
+    const [selectedRecords, setSelectedRecords] = useState([]);
 
     // 날짜 포멧
     const getCurrentDate = () => {
@@ -52,7 +53,8 @@ const Todo = () => {
             const newRecord = {
                 weight,
                 exerciseHours,
-                date: getCurrentDate()
+                date: getCurrentDate(),
+                id: Date.now() // Unique ID for each record
             };
             setRecords([...records, newRecord]);
             setWeight('');
@@ -60,6 +62,21 @@ const Todo = () => {
         } else {
             alert("몸무게와 운동 시간을 입력하세요.");
         }
+    };
+
+    // 4. 체크박스 컬럼 (몸무게 기록 삭제)
+    const handleSelectRecord = (id) => {
+        setSelectedRecords(prev => {
+            if (prev.includes(id)) {
+                return prev.filter(recordId => recordId !== id);
+            } else {
+                return [...prev, id];
+            }
+        });
+    };
+    const handleDeleteSelectedRecords = () => {
+        setRecords(records.filter(record => !selectedRecords.includes(record.id)));
+        setSelectedRecords([]);
     };
 
     return (
@@ -176,6 +193,7 @@ const Todo = () => {
                         <table className="record-table">
                             <thead>
                                 <tr>
+                                    <th>선택</th>
                                     <th>날짜</th>
                                     <th>몸무게 (kg)</th>
                                     <th>운동 시간 (시간)</th>
@@ -184,11 +202,18 @@ const Todo = () => {
                             <tbody>
                                 {records.length === 0 ? (
                                     <tr>
-                                        <td colSpan="3">기록이 없습니다</td>
+                                        <td colSpan="4">기록이 없습니다</td>
                                     </tr>
                                 ) : (
                                     records.map((record, index) => (
                                         <tr key={index}>
+                                            <td>
+                                                <input
+                                                    type="checkbox"
+                                                    checked={selectedRecords.includes(record.id)}
+                                                    onChange={() => handleSelectRecord(record.id)}
+                                                />
+                                            </td>
                                             <td>{record.date}</td>
                                             <td>{record.weight}</td>
                                             <td>{record.exerciseHours}</td>
@@ -197,6 +222,11 @@ const Todo = () => {
                                 )}
                             </tbody>
                         </table>
+                        <div className="button-container">
+                            <button type="button" className="delete-button" onClick={handleDeleteSelectedRecords}>
+                                기록 삭제
+                            </button>
+                        </div>
                     </div>
                 </div>
 

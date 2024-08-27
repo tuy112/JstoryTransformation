@@ -49,24 +49,36 @@
 }
 
 /* 버튼 스타일 */
-.add-button {
-    background-color: #5b9bd5;
-    color: #fff;
+.add-button, .delete-button {
+    padding: 10px 15px;
     border: none;
-    padding: 0 25px;
-    border-radius: 8px;
-    font-size: 15px;
+    color: #fff;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    margin-left: 10px;
+    font-size: 16px;
 }
-
+.add-button {
+    background-color: #007bff;
+}
 .add-button i {
     font-size: 20px;
 }
-
 .add-button:hover {
     background-color: #488ac7;
+}
+.button-container {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.button-container .delete-button {
+    margin: 0;
+}
+.delete-button {
+    background-color: #dc3545;
+}
+.delete-button:hover {
+    background-color: #c82333;
 }
 
 /* 테이블 스타일 */

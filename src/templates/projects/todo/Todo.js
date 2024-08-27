@@ -4,6 +4,9 @@ import { IoArrowBack, IoAddOutline } from "react-icons/io5";
 
 import '../../../static/css/common/reset.css';
 import '../../../static/css/todo/todo.css';
+import github from '../../../static/images/GithubLogo.png';
+import blog from '../../../static/images/TstoryLogo.png';
+import youtube from '../../../static/images/YoutubeLogo.png';
 
 const Todo = () => {
     // 백 데이터 가져오기
@@ -112,7 +115,7 @@ const Todo = () => {
                         <li><Link to = "/">Home</Link></li>
                         <li><Link to = "/profile">Profile</Link></li>
                         <li><Link to = "/project">Project</Link></li>
-                        <li><Link to="/link">[SideProject] JH TODOLIST</Link></li>
+                        <li><Link to="/todo">[SideProject] JH TODOLIST</Link></li>
                         <li><Link to="/qna">[SideProject] QNA</Link></li>
                         <li><Link to="/mountain">[SideProject] 등산 기록방</Link></li>
                         <li><Link to="/jGame">[SideProject] JWorld(게임)</Link></li>
@@ -244,8 +247,20 @@ const Todo = () => {
                         </div>
                     </div>
                 </div>
-                
             </section>
+
+            {/* footer */}
+            <footer id="footer">
+                <h3>CONTACT ME</h3>
+                <ul className="links">
+                    <li><Link to="https://github.com/tuy112"><img src={github} alt="깃허브"/><em>GITHUB</em></Link></li>
+                    <li><Link to="https://jh-healing-place.tistory.com/"><img src={blog} alt="티스토리"/><em>BLOG</em></Link></li>
+                    <li><Link to="https://www.youtube.com/channel/UCIUZejYbHXZOHhwUokcRBUQ"><img src={youtube} alt="유튜브"/><em>YOUTUBE</em></Link></li>
+                </ul>
+                <div className="always">
+                    <p>Future Korean NO.1 Developer</p>
+                </div>
+	        </footer>
         </div>
     );
 

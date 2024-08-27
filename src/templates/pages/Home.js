@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
-import { IoAppsSharp } from "react-icons/io5";
+import { IoArrowBack } from "react-icons/io5";
 
 import '../../static/css/common/reset.css';
 import '../../static/css/common/common.css';
@@ -34,7 +34,7 @@ const Home = () => {
                 </h1>
 
                 <button className="hamburger-menu" onClick={toggleMenu}>
-                    <IoAppsSharp size={21}/>
+                    <IoArrowBack size={21}/>
 	            </button>
                 
                 <div className={`side-menu ${isOpen ? 'open' : ''}`} id="sideMenu">

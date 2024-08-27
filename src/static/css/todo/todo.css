@@ -1,0 +1,153 @@
+.main {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 89vh;
+    margin: 0;
+}
+.todo-container {
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    width: 400px;
+}
+
+/* 메인 타이틀 스타일 */
+.title-section h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 입력 섹션 스타일 */
+.input-section {
+    margin-bottom: 20px;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 레이블 스타일 */
+.input-wrapper label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/* 입력 필드 스타일 */
+.todo-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.todo-input:focus {
+    border-color: #5b9bd5;
+}
+
+/* 버튼 스타일 */
+.add-button {
+    background-color: #5b9bd5;
+    color: #fff;
+    border: none;
+    padding: 0 16px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-left: 10px;
+}
+
+.add-button i {
+    font-size: 20px;
+}
+
+.add-button:hover {
+    background-color: #488ac7;
+}
+
+/* 테이블 스타일 */
+.todo-table, .record-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.todo-table th, .todo-table td, .record-table th, .record-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.todo-table th, .record-table th {
+    background-color: #5b9bd5;
+    color: white;
+}
+
+.todo-table td, .record-table td {
+    background-color: #f9f9f9;
+}
+
+.todo-table .delete-button {
+    background-color: #ff6b6b;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.todo-table .delete-button:hover {
+    background-color: #ff4c4c;
+}
+
+
+/* 운동 및 몸무게 기록 섹션 */
+.record-container {
+    margin-top: 70px;
+    border: 1px solid #777;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.record-container h2 {
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+}
+
+.record-input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.record-input-section label {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.record-input-section input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    outline: none;
+}
+
+.record-input-section input:focus {
+    border-color: #5b9bd5;
+}

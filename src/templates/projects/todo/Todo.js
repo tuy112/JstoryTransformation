@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { IoArrowBack, IoAddOutline } from "react-icons/io5";
+import axios from 'axios';
 
 import '../../../static/css/common/reset.css';
 import '../../../static/css/todo/todo.css';
@@ -9,25 +10,19 @@ import blog from '../../../static/images/TstoryLogo.png';
 import youtube from '../../../static/images/YoutubeLogo.png';
 
 const Todo = () => {
-    // 백 데이터 가져오기
-    const [data, setData] = useState([]);
-
-    // 1. header 토글 버튼 기능
-    const [isOpen, setIsOpen] = useState(false);
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
-
-    // 2. TODOLIST 버튼 기능 + 몸무게 변수 선언
-    const [todos, setTodos] = useState([]);
+    // 데이터 상태
+    // todoList 시작
+    const [data, setData] = useState('');
+    // const [message, setMessage] = useState("");
     const [inputValue, setInputValue] = useState('');
 
+    // 운동기록 시작
     const [weight, setWeight] = useState('');
     const [exerciseHours, setExerciseHours] = useState('');
     const [records, setRecords] = useState([]);
     const [selectedRecords, setSelectedRecords] = useState([]);
 
-    // 날짜 포멧
+    // 날짜 포맷 함수
     const getCurrentDate = () => {
         const now = new Date();
         const year = now.getFullYear();
@@ -36,21 +31,57 @@ const Todo = () => {
         return `${year}-${month}-${day}`;
     };
 
+    // 1. header 토글 버튼 기능
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
+    
     // 2-1. 할 일 추가
     const handleAddTodo = () => {
         if (inputValue.trim() === '') {
             alert('할 일을 입력해주세요ㅠ_ㅠ');
             return;
         }
+        const newTodo = {
+            contents: inputValue,
+            regDate: getCurrentDate(),
+            completeYn: 'N'  // 기본값으로 'N' 설정
+        };
 
-        setTodos([...todos, inputValue]);
-        setInputValue('');
+        fetch('/todoList/create', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(newTodo).toString()
+        })
+        .then(() => {
+            // 데이터 새로 고침
+            fetchTodo();
+            setInputValue('');
+        })
+        .catch(err => {
+            console.error('Error details:', err.response ? err.response.data : err.message);
+            alert('서버에서 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+        });
     };
 
     // 2-2. 할 일 삭제
-    const handleDeleteTodo = (index) => {
-        const newTodos = todos.filter((_, i) => i !== index);
-        setTodos(newTodos);
+    const handleDeleteTodo = (id) => {
+        fetch.delete(`/todoList/delete?id=${id}`, { method: 'DELETE' })
+            .then(() => {
+                // 데이터 새로 고침
+                fetchTodo();
+            });
+    };
+
+    // 2-3. 할 일 목록 데이터 로드
+    const fetchTodo = () => {
+        fetch("/todoList")
+        .then(response => response.json())
+        .then(data => {                
+            setData(data);            
+        });
     };
 
     // 3. 몸무게 및 운동 기록
@@ -59,12 +90,19 @@ const Todo = () => {
             const newRecord = {
                 weight,
                 exerciseHours,
-                date: getCurrentDate(),
-                id: Date.now() // Unique ID for each record
+                recordDate: getCurrentDate(),
+                createdAt: getCurrentDate()
             };
-            setRecords([...records, newRecord]);
-            setWeight('');
-            setExerciseHours('');
+            fetch('/records/add', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(newRecord)
+            }).then(response => response.json())
+              .then(() => {
+                  setRecords([...records, { ...newRecord, id: Date.now() }]);
+                  setWeight('');
+                  setExerciseHours('');
+              });
         } else {
             alert("몸무게와 운동 시간을 입력하세요.");
         }
@@ -72,28 +110,31 @@ const Todo = () => {
 
     // 4. 체크박스 컬럼 (몸무게 기록 삭제)
     const handleSelectRecord = (id) => {
-        setSelectedRecords(prev => {
-            if (prev.includes(id)) {
-                return prev.filter(recordId => recordId !== id);
-            } else {
-                return [...prev, id];
-            }
-        });
-    };
-    const handleDeleteSelectedRecords = () => {
-        setRecords(records.filter(record => !selectedRecords.includes(record.id)));
-        setSelectedRecords([]);
+        setSelectedRecords(prev => prev.includes(id) ? prev.filter(recordId => recordId !== id) : [...prev, id]);
     };
 
+    // 선택된 기록 삭제 함수
+    const handleDeleteSelectedRecords = () => {
+        fetch('/records/delete', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ ids: selectedRecords })
+        }).then(() => {
+            setRecords(records.filter(record => !selectedRecords.includes(record.id)));
+            setSelectedRecords([]);
+        });
+    };
+
+    // 컴포넌트가 마운트될 때 데이터 로드
     useEffect(() => {
-        fetch("/todoList")
-            .then((res) => {
-              return res.json();
-            })
-            .then(function (result) {
-                setData(result);
-          })
-      },[]);
+        fetchTodo();
+
+        // fetch('/todoList')            
+        // .then(response => response.text())            
+        // .then(message => {                
+        //     setMessage(message);            
+        // });
+    }, []);
 
     return (
         <div id="wrap">
@@ -133,55 +174,59 @@ const Todo = () => {
             {/* body */}
             <section id="container" className="main">
                 {/* todoList */}
-                <div className="todo-container" id="todolist">
-                    <div className="title-section">
-                        <h1>JH TODOLIST</h1>
-                    </div>
-                    <div className="input-section">
-                        <form>
-                            <div className="input-wrapper">
-                                <label htmlFor="todo-input">오늘 할 일!!</label>
-                                <input
-                                    type="text"
-                                    id="todo-input"
-                                    className="todo-input"
-                                    value={inputValue}
-                                    onChange={(e) => setInputValue(e.target.value)}
-                                    autoFocus
-                                />
-                                <button type="button" className="add-button" onClick={handleAddTodo}>
-                                    <IoAddOutline />
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    {/* 할 일 쌓이는 테이블 */}
-                    <table className="todo-table">
-                        <thead>
+            <div className="todo-container" id="todolist">
+                <div className="title-section">
+                    <h1>JH TODOLIST</h1>
+                </div>
+                <div className="input-section">
+                    <form>
+                        <div className="input-wrapper">
+                            <label htmlFor="todo-input">오늘 할 일!!</label>
+                            <input
+                                type="text"
+                                id="todo-input"
+                                className="todo-input"
+                                value={inputValue}
+                                onChange={(e) => setInputValue(e.target.value)}
+                                autoFocus
+                            />
+                            <button type="button" className="add-button" onClick={handleAddTodo}>
+                                <IoAddOutline />
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                {/* 할 일 쌓이는 테이블 */}
+                {/* <h1 className="App-title">{message}</h1> */}
+
+                <table className="todo-table">
+                    <thead>
+                        <tr>
+                            <th>날짜</th>
+                            <th>할 일</th>
+                            <th>삭제</th>
+                        </tr>
+                    </thead>
+                    <tbody className="todo-list">
+                        {data.length === 0 ? (
                             <tr>
-                                <th>할 일</th>
-                                <th>삭제</th>
+                                <td colSpan="3">할 일이 없습니다. 일좀 해..</td>
                             </tr>
-                        </thead>
-                        <tbody className="todo-list">
-                            {todos.length === 0 ? (
-                                <tr>
-                                    <td colSpan="2">할 일이 없습니다</td>
+                        ) : (
+                            data.map((info) => (
+                                <tr key={info.id}>
+                                    <td>{info.regDate}</td>
+                                    <td>{info.contents}</td>
+                                    <td>
+                                        <button className="delete-button" onClick={() => handleDeleteTodo(info.id)}>
+                                            삭제
+                                        </button>
+                                    </td>
                                 </tr>
-                            ) : (
-                                todos.map((todo, index) => (
-                                    <tr key={index}>
-                                        <td>{todo}</td>
-                                        <td>
-                                            <button className="delete-button" onClick={() => handleDeleteTodo(index)}>
-                                                삭제
-                                            </button>
-                                        </td>
-                                    </tr>
-                                ))
-                            )}
-                        </tbody>
-                    </table>
+                            ))
+                        )}
+                    </tbody>
+                </table>
 
                     {/* 몸무게 기록 공간 */}
                     <div className="record-container">
@@ -223,8 +268,8 @@ const Todo = () => {
                                         <td colSpan="4">기록이 없습니다</td>
                                     </tr>
                                 ) : (
-                                    records.map((record, index) => (
-                                        <tr key={index}>
+                                    records.map((record) => (
+                                        <tr key={record.id}>
                                             <td>
                                                 <input
                                                     type="checkbox"
@@ -232,7 +277,7 @@ const Todo = () => {
                                                     onChange={() => handleSelectRecord(record.id)}
                                                 />
                                             </td>
-                                            <td>{record.date}</td>
+                                            <td>{record.recordDate}</td>
                                             <td>{record.weight}</td>
                                             <td>{record.exerciseHours}</td>
                                         </tr>
@@ -250,7 +295,7 @@ const Todo = () => {
             </section>
 
             {/* footer */}
-            <footer id="footer">
+           <footer id="footer">
                 <h3>CONTACT ME</h3>
                 <ul className="links">
                     <li><Link to="https://github.com/tuy112"><img src={github} alt="깃허브"/><em>GITHUB</em></Link></li>

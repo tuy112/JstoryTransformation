@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.5",
     "http-proxy-middleware": "^3.0.0",
     "jquery": "^3.7.1",
     "react": "^18.2.0",
@@ -17,7 +18,6 @@
     "three": "^0.161.0",
     "web-vitals": "^2.1.4"
   },
-  "proxy": "http://localhost:10047",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -30,6 +30,7 @@
       "react-app/jest"
     ]
   },
+  "proxy": "http://localhost:10047",
   "browserslist": {
     "production": [
       ">0.2%",

@@ -196,14 +196,15 @@ const Todo = () => {
                         </div>
                     </form>
                 </div>
-                {/* 할 일 쌓이는 테이블 */}
-                {/* <h1 className="App-title">{message}</h1> */}
 
+                {/* 할 일 쌓이는 테이블 */}
                 <table className="todo-table">
                     <thead>
                         <tr>
-                            <th>날짜</th>
-                            <th>할 일</th>
+                            <th>ID</th>
+                            <th>내용</th>
+                            <th>완료 여부</th>
+                            <th>등록일</th>
                             <th>삭제</th>
                         </tr>
                     </thead>
@@ -215,8 +216,10 @@ const Todo = () => {
                         ) : (
                             data.map((info) => (
                                 <tr key={info.id}>
-                                    <td>{info.regDate}</td>
+                                    <td>{info.id}</td>
                                     <td>{info.contents}</td>
+                                    <td>{info.completeYn === 'Y' ? '완료' : '미완료'}</td>
+                                    <td>{new Date(info.regDate).toLocaleDateString()}</td>
                                     <td>
                                         <button className="delete-button" onClick={() => handleDeleteTodo(info.id)}>
                                             삭제

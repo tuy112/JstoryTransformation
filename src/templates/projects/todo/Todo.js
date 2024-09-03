@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { IoArrowBack, IoAddOutline } from "react-icons/io5";
-import axios from 'axios';
 
 import '../../../static/css/common/reset.css';
 import '../../../static/css/todo/todo.css';
@@ -46,14 +45,13 @@ const Todo = () => {
         }
         const newTodo = {
             contents: inputValue,
-            regDate: getCurrentDate(),
-            completeYn: 'N'  // 기본값으로 'N' 설정
+            completeYn: 'N'
         };
 
         fetch('/todoList/create', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(newTodo).toString()
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(newTodo)
         })
         .then(() => {
             // 데이터 새로 고침
@@ -68,11 +66,17 @@ const Todo = () => {
 
     // 2-2. 할 일 삭제
     const handleDeleteTodo = (id) => {
-        fetch.delete(`/todoList/delete?id=${id}`, { method: 'DELETE' })
-            .then(() => {
-                // 데이터 새로 고침
-                fetchTodo();
-            });
+        fetch(`/todoList/delete?id=${id}`, {
+            method: 'DELETE',
+        })
+        .then(() => {
+            // 데이터 새로 고침
+            fetchTodo();
+        })
+        .catch(error => {
+            console.error('Error deleting todo:', error);
+            alert('할 일을 삭제하는 중 오류가 발생했습니다.');
+        });
     };
 
     // 2-3. 할 일 목록 데이터 로드
@@ -82,6 +86,21 @@ const Todo = () => {
         .then(data => {                
             setData(data);            
         });
+    };
+
+    // 2-4. 할 일 목록 (완료여부) 토글 기능
+    const handleToggleComplete = (id) => {
+        const updatedData = data.map((info) => {
+            if (info.id === id) {
+                return {
+                    ...info,
+                    completeYn: info.completeYn === 'Y' ? 'N' : 'Y',
+                };
+            }
+            return info;
+        });
+    
+        setData(updatedData); // 상태를 업데이트하는 함수 (예: setData)
     };
 
     // 3. 몸무게 및 운동 기록
@@ -211,14 +230,16 @@ const Todo = () => {
                     <tbody className="todo-list">
                         {data.length === 0 ? (
                             <tr>
-                                <td colSpan="3">할 일이 없습니다. 일좀 해..</td>
+                                <td colSpan="5">할 일이 없습니다. 일좀 해..</td>
                             </tr>
                         ) : (
                             data.map((info) => (
                                 <tr key={info.id}>
                                     <td>{info.id}</td>
                                     <td>{info.contents}</td>
-                                    <td>{info.completeYn === 'Y' ? '완료' : '미완료'}</td>
+                                    <td onClick={() => handleToggleComplete(info.id)}>
+                                        {info.completeYn === 'Y' ? '완료' : '미완료'}
+                                    </td>
                                     <td>{new Date(info.regDate).toLocaleDateString()}</td>
                                     <td>
                                         <button className="delete-button" onClick={() => handleDeleteTodo(info.id)}>

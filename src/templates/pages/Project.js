@@ -53,7 +53,6 @@ const Project = () => {
                         <li><Link to = "/profile">Profile</Link></li>
                         <li><Link to = "/project">Project</Link></li>
                         <li><Link to="/todo">[SideProject] JH TODOLIST</Link></li>
-                        <li><Link to="/qna">[SideProject] QNA</Link></li>
                         <li><Link to="/mountain">[SideProject] 등산 기록방</Link></li>
                         <li><Link to="/jGame">[SideProject] JWorld(게임)</Link></li>
                     </ul>

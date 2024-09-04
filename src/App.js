@@ -5,7 +5,6 @@ import { Routes , Route } from "react-router-dom";
 import Home from './templates/pages/Home';
 import Profile from './templates/pages/Profile';
 import Project from './templates/pages/Project';
-import Qna from './templates/pages/Qna';
 // login
 import Login from './templates/pages/Login';
 // Projects
@@ -22,7 +21,6 @@ const App = () => {
       {/* pages */}
       <Route path="/profile" element={<Profile/>}></Route>
       <Route path="/project" element={<Project/>}></Route>
-      <Route path="/qna" element={<Qna/>}></Route>
 
       {/* signUp + login */}
       <Route path="/login" element={<Login/>}></Route>

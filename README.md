@@ -23,13 +23,15 @@ Github 링크 : https://github.com/tuy112/Jstory
 
 4. map.js (OpenLayers)를 이용해서 "산 기록방" 페이지 제작 [지도 위에 점 표시]
 
-5. 나의 연표 ( 일대기 -> 개발 시작한 날로 변경 )
+👉 산 기록방 작업 링크 : https://github.com/tuy112/gisDev
+
+5. 나의 연표 ( Profile ) / 내가 지금까지 수행한 프로젝트 목록 ( Project )
 
 6. TODOLIST + 몸무게 기록실 제작 중 ( Java )
 
-7. JGame이라는 페이지 신규 추가 ( 내가 만든 게임 모음 페이지 )
+7. JGame이라는 페이지 신규 추가 ( 내가 만든 게임 모음 페이지 - Three.js X Java 사용 예정)
 
-8. QNA라는 게시판 및 실시간 채팅 페이지 신규 추가 ( Java )
+8. QNA라는 모달 신규 추가 -> 이메일 보내기 기능 ( Java )
 
 
 ### Tools

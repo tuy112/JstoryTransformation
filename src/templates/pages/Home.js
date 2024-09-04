@@ -109,7 +109,7 @@ const Home = () => {
                         <div className="box-item item4" onClick={openModal}>
                             <div className="box-front">
                                 <h3>QNA</h3>
-                                <p>실시간 채팅 X 게시판</p>
+                                <p>저에 대해서 궁금한 점을 물어보세요!</p>
                             </div>
                             <div className="box-back">
                                 <p>Click to Visit Page 4</p>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 
 // icon
@@ -10,24 +10,10 @@ import '../../static/css/sub.css';
 
 const Project = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [projects, setProjects] = useState([]);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
-
-    useEffect(() => {
-        fetch('/api/project')
-            .then((response) => response.json())
-            .then((data) => {
-                if (Array.isArray(data)) {
-                    setProjects(data);
-                } else {
-                    console.error('Data is not an array:', data);
-                }
-            })
-            .catch((error) => console.error('Error fetching projects:', error));
-    }, []);
 
     return (
         <div id="wrap">
@@ -71,7 +57,7 @@ const Project = () => {
                 <div className="projectBox project">
                     <div className="inner">
                         <div className="projectTxt">
-                            <h2>PROJECT <em>[ 아래 항목을 클릭해주세요 ]</em></h2>
+                            <h2>PROJECT <em>[ 아래 항목들을 확인해주세요 ]</em></h2>
                             <div className="projectDetailBox">
                                 <p>
                                     ☆ 3 <br/>
@@ -87,7 +73,8 @@ const Project = () => {
                                     "화면 설계서 및 규격서를 보면서 구현 단계 (7월)"<br/>
                                     "구현한 화면에 대해서 직접 테스트 진행 및 수정 (8월 진행 예정)"<br/>
                                     "인수테스트 및 최종 완성 (9월)"<br/>
-                                    "각 페이지 리스트 목록 CRUD"
+                                    "각 페이지 리스트 목록 CRUD"<br/>
+                                    "통계 페이지 일괄 작업"
                                 </p>
                             </div>
                             <div className="projectDetailBox">
@@ -97,19 +84,15 @@ const Project = () => {
                                     [2023-11-06 ~ 2024-01-26]<br/>
                                     - 업무명 : 플랫폼 2D 환경 고도화 팀<br/>
                                     - 사용 언어 : Java(Spring), postgreSQL <br/>
-                                    - API 사용건 수 요구 분석 (ppt제작)<br/>
-                                    - 막대그래프 -&lt; 선형그래프<br/>
-                                    - 영상타일링 레이어 관리 신규 개발<br/>
                                     <br/>
-                                    - 요구 분석 (ppt 정리)<br/>
-                                    - 배경지도 가져오는 곳 파악<br/>
-                                    - 영상 레이어 가져오는 곳 파악<br/>
-                                    - 미리보기 로직 제작 (미완성-로직공유 가능)<br/>
-                                    - 저장 API Post (insert)<br/>
-                                    - 저장 API GET 하나 (selectOne)<br/>
-                                    - 저장 API GET 전체 (selecetList)<br/>
-                                    - 웹맵을 실행시키면 레이어를 그 위에 중첩 + 그 레이어로 바로 이동시키는 로직 완성<br/>
-                                    - 인수인계 PPT 직접 제작 후, 이어 받을 개발자에게 내용 설명<br/>
+                                    - API 사용 건 수 요구 분석 (ppt제작) <br/>
+                                    - 막대그래프 -> 선형그래프 (차트라이브러리 - chart.js 사용)<br/>
+                                    - 영상타일링 레이어 관리 신규 개발 <br/>
+                                    - 요구 분석 (PPT 정리) <br/>
+                                    - 오픈API 데이터 GET <br/>
+                                    - 기존에 만들어져 있던 DB TABLE 확인 및 수정작업 (selectOne)<br/>
+                                    - 미리보기 로직설계 <br/>
+                                    - 지도 위에 레이어 중첩 기능 구현 <br/>
                                 </p>
                             </div>
                             <div className="projectDetailBox">
@@ -119,43 +102,15 @@ const Project = () => {
                                     [2022-02-03 ~ 2022-09-30]<br/>
                                     - 업무명 : 화면로직개발<br/>
                                     - 사용 언어 : JavaScript, xml, Java<br/>
-                                    - 단말(통합단말 변환 및 보정 개발)<br/>
-                                    웹스퀘어를 사용해서 구통합단말 as-is(map,txt파일)를 신통합단말 tobe(xml)로 바꾸는 전환개발을 담당 (+디지털창구)<br/>
-                                    + 결함관리 : 결함목록조회 및 처리<br/>
+                                    <br/>
+                                    - 구형통합단말( map과 txt파일 ) → 신형통합단말( xml ) 로 전환 개발 <br/>
+                                    - 서비스 매핑 확인 및 수정 (DB에서 데이터가 잘 내려오는지 확인) <br/>
+                                    - 결함목록 확인 및 수정 (통합테스트,인수테스트 단계 개발 수행) <br/>
                                     <br/>
                                     [ 관련 링크 클릭 ==》 <a href="https://byline.network/2021/01/21-119/">신한은행 통합단말 관련 기사</a> ]
 
                                 </p>
                             </div>
-
-                            {/* springBoot 연동완료 */}
-                            {/* <div className="projectBox project">
-                                <div className="inner">
-                                    <div className="projectTxt">
-                                        <h2>PROJECT <em>[ 아래 항목을 클릭해주세요 ]</em></h2>
-                                        {projects.map((project, index) => (
-                                            <div className="projectDetailBox" key={index}>
-                                                <p>
-                                                    ☆ {projects.length - index} <br/>
-                                                    {project.name}<br/> 
-                                                    [{project.period}]<br/>
-                                                    - 업무명 : {project.tasks['업무명']}<br/>
-                                                    - 사용 언어 : {project.tasks['사용 언어']}<br/>
-                                                    - 개발 환경 : {project.tasks['개발환경']}<br/>
-                                                    - 소속 회사 : {project.tasks['소속 회사']}<br/>
-                                                    - 성과 : {project.tasks['성과']}<br/>
-                                                    - 주요 업무 : <br/>
-                                                    {project.tasks['주요 업무'].map((task, taskIndex) => (
-                                                        <span key={taskIndex}>"{task}"<br/></span>
-                                                    ))}
-                                                </p>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div> */}
-
-
                         </div>
                     </div>
                 </div>

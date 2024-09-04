@@ -6,9 +6,9 @@ Github 링크 : https://github.com/tuy112/Jstory
 
 👉 배포 페이지 : https://tuy112.github.io
 
-최신 업데이트 날짜 : 2024.08.30
+최신 업데이트 날짜 : 2024.09.05
 
-최신 릴리즈 버전 : ver 0.3 ( ver 1.0 출시 예정일: 미정 )
+최신 릴리즈 버전 : ver 0.4 ( ver 1.0 출시 예정일: 미정 )
 
 ### Jstory 고도화 프로젝트 주요 내용
 

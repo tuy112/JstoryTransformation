@@ -76,9 +76,11 @@ const Profile = () => {
                     <div className="inner">
                         <div>
                             <h2>Capability</h2>
-                            <p>Node.js &#40;Express.js, Nest.js&#41; </p>
+                            <p>Java &#40;Spring&#41; </p>
+                            <p>Javascript &#40;React.js, Node.js&#41; </p>
+                            <p>Python &#40;Flask&#41; </p>
                             <p>Publishing with html, CSS, JS </p>
-                            <p>Connecting DB (using MySQL, Oracle) </p>
+                            <p>Connecting DB (using MySQL, PostgreSQL) </p>
                             <p>Using Eclipse, Websquare5, Nexacro (Java, JSP.. etc) </p>
                             <p>UX Research / UI Prototyping </p>
                         </div>

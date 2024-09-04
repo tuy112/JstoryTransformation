@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { IoArrowBack } from "react-icons/io5";
 
@@ -9,14 +9,28 @@ import github from '../../static/images/GithubLogo.png';
 import blog from '../../static/images/TstoryLogo.png';
 import youtube from '../../static/images/YoutubeLogo.png';
 // import walkGif from '../../static/images/modal/Walk.gif';
-
+import QnaModal from './QnaModal';
 
 const Home = () => {
     const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
+    // 사이드바 메뉴 열기 + 닫기
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+    };
+
+    // QNA 모달창 열기 + 닫기
+    const openModal = (e) => {
+        e.stopPropagation();
+        console.log("모달 열림");
+        setIsModalOpen(true);
+    };
+    const closeModal = () => {
+        console.log("모달 닫힘");
+        // debugger;
+        setIsModalOpen(false);
     };
 
     return (
@@ -92,7 +106,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="box-item item4" onClick={() => navigate('/qna')}>
+                        <div className="box-item item4" onClick={openModal}>
                             <div className="box-front">
                                 <h3>QNA</h3>
                                 <p>실시간 채팅 X 게시판</p>
@@ -100,6 +114,7 @@ const Home = () => {
                             <div className="box-back">
                                 <p>Click to Visit Page 4</p>
                             </div>
+                            <QnaModal isOpen={isModalOpen} onRequestClose={closeModal} />
                         </div>
                     </div>
                 </div>
@@ -117,29 +132,6 @@ const Home = () => {
                     <p>Future Korean NO.1 Developer</p>
                 </div>
 	        </footer>
-
-            {/* Modal */}
-            {/* {modalOpen && (
-                <div 
-                    className="modal" 
-                    ref={modalBackground} 
-                    onClick={e => {
-                        if (e.target === modalBackground.current) {
-                            setModalOpen(false);
-                        }
-                    }}
-                >
-                    <div className="modal-popup">
-                        <div className="modal-txt">
-                            <p>지금 바로 이동합니다~ 잠시만 기다려주세요^^</p>
-                            <p>물이라도 한잔하고 와</p>
-                        </div>
-                        <div className="loading" id="load">
-                            <img src={walkGif} alt="loading"/>
-                        </div>
-                    </div>
-                </div>
-            )} */}
         </div> 
     );
 };

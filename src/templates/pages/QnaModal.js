@@ -14,17 +14,27 @@ const QnaModal = ({ isOpen, onRequestClose}) => {
         e.preventDefault();
 
         // 이메일 전송로 내용 전달
-        await fetch('/api/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                to: 'dha3a05@daum.net',
-                subject: 'QNA 문의사항',
-                text: `Name: ${name}\nDepartment: ${department}\nEmail: ${email}\nQuestion: ${question}`,
-            }),
-        });
+        try {
+            const response = await fetch('/mail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    to: 'mastercatch3@gmail.com',
+                    subject: 'QNA 문의사항',
+                    text: `Name: ${name}\nDepartment: ${department}\nEmail: ${email}\nQuestion: ${question}`,
+                }),
+            });
+
+            if (response.ok) {
+                alert('JH에게 성공적으로 이메일을 보냈습니다!');
+            } else {
+                alert('이메일을 보내지 못했습니다ㅠ_ㅠ 다시 시도해보세요..');
+            }
+        } catch (error) {
+            alert('이메일 보내기 실패.. 서버 관리자에게 문의해주세요..');
+        }
 
         onRequestClose(); // 모달 닫기
     };
@@ -39,7 +49,7 @@ const QnaModal = ({ isOpen, onRequestClose}) => {
             overlayClassName="modal-overlay"
         >
             <div className="modal-header">
-                <h2>문의사항</h2>
+                <h2>QNA (궁금한 건 다 물어보세요^^)</h2>
                 <button
                     className="close-btn"
                     onClick={(e) => {

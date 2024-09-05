@@ -86,7 +86,7 @@ const Project = () => {
                                     - 사용 언어 : Java(Spring), postgreSQL <br/>
                                     <br/>
                                     - API 사용 건 수 요구 분석 (ppt제작) <br/>
-                                    - 막대그래프 -> 선형그래프 (차트라이브러리 - chart.js 사용)<br/>
+                                    - 막대그래프 &rarr; 선형그래프 (차트라이브러리 - chart.js 사용)<br/>
                                     - 영상타일링 레이어 관리 신규 개발 <br/>
                                     - 요구 분석 (PPT 정리) <br/>
                                     - 오픈API 데이터 GET <br/>

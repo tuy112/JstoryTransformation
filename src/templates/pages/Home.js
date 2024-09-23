@@ -18,7 +18,7 @@ const Home = () => {
 
     // 사이드바 메뉴 열기 + 닫기
     const toggleMenu = () => {
-        setIsOpen(!isOpen);
+        setIsOpen(!isOpen); 
     };
 
     // QNA 모달창 열기 + 닫기
@@ -95,7 +95,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="box-item item3" onClick={() => navigate('/todo')}>
+                        <div className="box-item item3" onClick={() => navigate('/login')}>
                             <div className="box-front">
                                 <h3>TODOLIST</h3>
                                 <p>나만의공부방<br/> + <br/>운동기록</p>

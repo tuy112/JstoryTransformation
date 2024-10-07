@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+// import Calendar from 'react-calendar';
 import { IoArrowBack, IoAddOutline } from "react-icons/io5";
 
 import '../../../static/css/common/reset.css';
@@ -8,11 +9,11 @@ import github from '../../../static/images/GithubLogo.png';
 import blog from '../../../static/images/TstoryLogo.png';
 import youtube from '../../../static/images/YoutubeLogo.png';
 
+// import 'react-calendar/dist/Calendar.css';
+
 const Todo = () => {
     // 데이터 상태
-    // todoList 시작
     const [data, setData] = useState('');
-    // const [message, setMessage] = useState("");
     const [inputValue, setInputValue] = useState('');
 
     // 운동기록 시작
@@ -20,6 +21,12 @@ const Todo = () => {
     const [exerciseHours, setExerciseHours] = useState('');
     const [records, setRecords] = useState([]);
     const [selectedRecords, setSelectedRecords] = useState([]);
+
+    const [accounting, setAccounting] = useState([]);
+    const [expense, setExpense] = useState('');
+    const [description, setDescription] = useState('');
+
+    // const [selectedDate, setSelectedDate] = useState(new Date());
 
     // 날짜 포맷 함수
     const getCurrentDate = () => {
@@ -143,6 +150,26 @@ const Todo = () => {
             setSelectedRecords([]);
         });
     };
+
+    // 5. 가계부
+    // const handleAddAccounting = () => {
+    //     if (expense && description) {
+    //         const newRecord = {
+    //             expense,
+    //             description,
+    //             date: getCurrentDate(),
+    //         };
+    //         setAccounting([...accounting, { ...newRecord, id: Date.now() }]);
+    //         setExpense('');
+    //         setDescription('');
+    //     } else {
+    //         alert('지출 내역과 설명을 입력하세요.');
+    //     }
+    // };
+
+    // const onDateChange = (date) => {
+    //     setSelectedDate(date);
+    // };
 
     // 컴포넌트가 마운트될 때 데이터 로드
     useEffect(() => {

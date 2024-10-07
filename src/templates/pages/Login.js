@@ -66,7 +66,7 @@ const Login = () => {
     return(
         <div id="wrap">
             {/* 임시 */}
-            <h5>testUser : abcd1234 / pw : 1234</h5>
+            <h5>testUser : abc1234 / pw : 1234</h5>
 
             <form onSubmit={onSubmitHandler}>
                 <label>Id</label>

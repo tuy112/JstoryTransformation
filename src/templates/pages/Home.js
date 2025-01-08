@@ -11,6 +11,7 @@ import youtube from '../../static/images/YoutubeLogo.png';
 // import walkGif from '../../static/images/modal/Walk.gif';
 import QnaModal from './QnaModal';
 
+
 const Home = () => {
     const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +66,15 @@ const Home = () => {
                         <li><Link to = "https://github.com/tuy112/JstoryTransformation">ASIS 1</Link></li>
                         <li><Link to = "https://github.com/tuy112/Jstory">ASIS 2</Link></li>
                         <li><Link to = "https://www.notion.so/Software-Developer-Kim-Jae-Hyeok-be4b14ad09ed4da5bd038c364109e8b4">노션이력서</Link></li>
-                        <li><Link to = "">API연동기획서(엑셀)</Link></li>
+                        <li>
+                            <a
+                            href="/doc/Jstory_고도화프로젝트_화면설계서_v0.22_250108.pptx"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >
+                            화면설계서 v0.22
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </header>

@@ -13,6 +13,7 @@ import Project from './templates/pages/Project';
 
 // login
 import Login from './templates/pages/Login';
+import Signup from './templates/pages/Signup';
 
 // Projects
 import Todo from './templates/projects/todo/Todo';
@@ -33,6 +34,7 @@ function App() {
 
       {/* signUp + login */}
       <Route path="/login" element={<Login/>}></Route>
+      <Route path="/signup" element={<Signup/>}></Route>
 
       {/* project */}
       <Route path="/todo" element={<Todo/>}></Route>

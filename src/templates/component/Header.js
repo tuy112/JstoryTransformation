@@ -16,8 +16,8 @@ function Header() {
                 {/* Header Title */}
                 <div className="header-title">
                     <h1 className="header-logo">
-                        <Link to="/" className="site-maintitle">Jstory</Link>
-                        <span className="site-subtitle"> - Jay's Hideout</span>
+                        <Link to="/home" className="site-maintitle">Jstory</Link>
+                        <span className="site-subtitle"> - Jay's Healing Space</span>
                     </h1>
                 </div>
                 
@@ -39,6 +39,7 @@ function Header() {
                                 <li><Link to ="/profile">Profile</Link></li>
                                 <li><Link to ="/project">Project</Link></li>
                                 <li><Link to ="/qna">FAQ</Link></li>
+                                <li><Link to ="/history">프로젝트연표</Link></li>
                             </ul>
                         </li>
                         <li>
@@ -61,16 +62,16 @@ function Header() {
                     </ul>
 
                     <ul className="bottom-menu">
-                        <li><Link to="https://github.com/tuy112/JstoryTransformation">ASIS 1</Link></li>
-                        <li><Link to="https://github.com/tuy112/Jstory">ASIS 2</Link></li>
-                        <li><Link to="https://www.notion.so/Software-Developer-Kim-Jae-Hyeok-be4b14ad09ed4da5bd038c364109e8b4">노션이력서</Link></li>
+                        <li><Link to="/three">3D 공간</Link></li>
+                        <li><Link to="https://github.com/tuy112/Jstory">Jstory ASIS</Link></li>
+                        <li><Link to="https://jstoryjay.notion.site/Jay-UI-UX-124211b2c60980b98d93f25d148bdcc3?pvs=4">노션이력서</Link></li>
                         <li>
                             <Link
-                                to="/doc/Jstory_고도화프로젝트_화면설계서_v0.22_250108.pptx"
+                                to="/doc/Jstory_고도화프로젝트_화면설계서_v0.26_250115.pptx"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                화면설계서 v0.22
+                                화면설계서 v0.26
                             </Link>
                         </li>
                     </ul>
@@ -84,6 +85,9 @@ function Header() {
                         </li>
                         <li>
                             <Link to="/signup">JOIN</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Gate보러가기</Link>
                         </li>
                     </ul>
                 </div>

@@ -10,6 +10,7 @@ import Home from './templates/pages/common/Home';
 // main
 import Profile from './templates/pages/Profile';
 import Project from './templates/pages/Project';
+import History from './templates/pages/History';
 
 // login
 import Login from './templates/pages/Login';
@@ -17,8 +18,9 @@ import Signup from './templates/pages/Signup';
 
 // Projects
 import Todo from './templates/projects/todo/Todo';
-import Mountain from './templates/projects/mountain/Mountain';
-import JGame from './templates/projects/game/JGame';
+// import Mountain from './templates/projects/mountain/Mountain';
+import Three from './templates/projects/three/Three';
+
 
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
       {/* pages */}
       <Route path="/profile" element={<Profile/>}></Route>
       <Route path="/project" element={<Project/>}></Route>
+      <Route path="/history" element={<History/>}></Route>
 
       {/* signUp + login */}
       <Route path="/login" element={<Login/>}></Route>
@@ -38,8 +41,7 @@ function App() {
 
       {/* project */}
       <Route path="/todo" element={<Todo/>}></Route>
-      <Route path="/mountain" element={<Mountain/>}></Route>
-      <Route path="/jGame" element={<JGame/>}></Route>
+      <Route path="/three" element={<Three/>}></Route>
     </Routes>
   );
 }

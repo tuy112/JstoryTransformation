@@ -1,0 +1,9 @@
+@media (max-width: 776px) {
+    .header-title {
+        text-align: center;
+        padding-top: 10px;
+    }
+    .header-title {
+        display: none;
+    }
+  }

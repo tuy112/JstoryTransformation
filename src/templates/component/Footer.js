@@ -31,7 +31,7 @@ function Footer() {
                     </li>
                 </ul>
                 <div className="always">
-                    <p>Do your Best, Then Good Result follow you :&#41;</p>
+                    <p>Do your Best, Then Good Result will be following you :&#41;</p>
                 </div>
             </div>
         </footer>

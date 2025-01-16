@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
-import Header from "../component/Header";
+// icon
+import { IoArrowBack } from "react-icons/io5";
 
 import '../../static/css/common/reset.css';
+import '../../static/css/common/common.css';
 import '../../static/css/sub.css';
 
 // image
 import me from '../../static/images/about_man.png';
 
 const Profile = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
 
     return (
         <div id="wrap">
@@ -16,14 +24,43 @@ const Profile = () => {
             <p id="skipNav" className="hide"><a href="./index.html">본문 바로가기</a></p>
 
             {/* header */}
-            <Header />
+            <header id="header">
+                <h1>
+                    <Link to="/" className="site-title" aria-label="Home page">
+                        Jstory
+                    </Link>
+                    <span className="site-subtitle"> - React X Java X MySQL</span>
+                </h1>
+
+                <button className="hamburger-menu" onClick={toggleMenu}>
+                    <IoArrowBack size={21}/>
+	            </button>
+                
+                <div className={`side-menu ${isOpen ? 'open' : ''}`} id="sideMenu">
+                    <ul className="menu-section">
+                        <li><Link to = "/">Home</Link></li>
+                        <li><Link to = "/profile">Profile</Link></li>
+                        <li><Link to = "/project">Project</Link></li>
+                        <li><Link to="/todo">[SideProject] JH TODOLIST</Link></li>
+                        <li><Link to="/mountain">[SideProject] 등산 기록방</Link></li>
+                        <li><Link to="/jGame">[SideProject] JWorld(게임)</Link></li>
+                    </ul>
+
+                    <ul className="bottom-menu">
+                        <li><Link to = "https://github.com/tuy112/JstoryTransformation">ASIS 1</Link></li>
+                        <li><Link to = "https://github.com/tuy112/Jstory">ASIS 2</Link></li>
+                        <li><Link to = "https://www.notion.so/Software-Developer-Kim-Jae-Hyeok-be4b14ad09ed4da5bd038c364109e8b4">노션이력서</Link></li>
+                        <li><Link to = "">API연동기획서(엑셀)</Link></li>
+                    </ul>
+                </div>
+            </header>
 
             {/* main */}
-            <section id="container" className="main">
+            <section className="main">
                 <div className="profile intro">
                     <div className="txtWrap">
                         <h2>About ME</h2>
-                        <img src={me} alt="Jay"/>
+                        <img src={me} alt="나자신"/>
                         <p>"기획, 디자인, 개발까지 다하는 인간 스타트업이 되기 위해서 노력 중에 있습니다. <br/>
                         비록 행정, 법, 경영학을 전공하였으나, 졸업 이후 꾸준히 컴공공부를 하였으며<br/>
                         개발자가 되었고 젊은 나이에 대규모 SI 프로젝트를 경험하였습니다.<br/>
@@ -35,15 +72,17 @@ const Profile = () => {
                 </div>
 
                 <div className="profile addi">
-                    <div className="txtWrap">
-                        <h2>Capability</h2>
-                        <p>Java &#40;Spring&#41; </p>
-                        <p>Javascript &#40;React.js, Node.js&#41; </p>
-                        <p>Python &#40;Flask&#41; </p>
-                        <p>Publishing with html, CSS, JS </p>
-                        <p>Connecting DB (using MySQL, PostgreSQL) </p>
-                        <p>Using Eclipse, Websquare5, Nexacro (Java, JSP.. etc) </p>
-                        <p>UX Research / UI Prototyping </p>
+                    <div className="inner">
+                        <div>
+                            <h2>Capability</h2>
+                            <p>Java &#40;Spring&#41; </p>
+                            <p>Javascript &#40;React.js, Node.js&#41; </p>
+                            <p>Python &#40;Flask&#41; </p>
+                            <p>Publishing with html, CSS, JS </p>
+                            <p>Connecting DB (using MySQL, PostgreSQL) </p>
+                            <p>Using Eclipse, Websquare5, Nexacro (Java, JSP.. etc) </p>
+                            <p>UX Research / UI Prototyping </p>
+                        </div>
                     </div>
                 </div>
 
@@ -80,8 +119,8 @@ const Profile = () => {
             </section>
 
             {/* footer */}
-            <footer id="sub-footer">
-                <p className="footer-word">Made By Kim Jae Hyeok</p>
+            <footer id="footer">
+                <p>Made By Kim Jae Hyeok</p>
             </footer>
         </div>
     );

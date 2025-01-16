@@ -1,21 +1,74 @@
-/* main */
-.main {
-	width: 100%;
+/* profile */
+.profile {
+    text-align: center;
 }
-#container {
-    height: 100vh;
+.profile h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    padding-top: 10px;
+}
+.profile.intro .txtWrap {
+    padding: 20px;
+}
+.profile.intro .txtWrap img {
+    width: 300px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+.profile.intro .txtWrap p {
+    line-height: 2.1;
+}
+.profile.addi p {
+    line-height: 2.1;
+}
+
+
+/* ==================================================== */
+/* project */
+.projectBox h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.projectBox h2 em {
+    font-size: 13px;
+    font-weight: 500;
+}
+.projectDetailBox {
+    border: 1px solid #333;
+    margin-bottom: 30px;
+    padding: 30px;
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+/* education */
+.education {
+    margin-top: 50px;
+}
+.education .program {
+    border: 3px solid #111;
+    width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+}
+.education h2 {
+    font-size: 30px;
+}
+.education .program p {
+    line-height: 2.3;
+    margin-bottom: 30px;
+}
+.education .program p:last-child {
+    margin-bottom: 0;
 }
 
 /* ==================================================== */
-/* sub1 : profile */
-.main h2 {
-    text-align: center;
-    font-weight: 400;
-    font-size: 25px;
-    color: #fff;
-}
-
-
 /* profile - lifeGraph */
 .lifeGraph h4 {
     position: relative;
@@ -100,79 +153,40 @@
     font-weight: 600;
 }
 
-
-/* ==================================================== */
-/* sub2 : project */
-.select-wrap h2 {
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 15px;
-    font-weight: 400;
-  }
-  
-/*  카드  */
-.select-box {
-    width: 90%;
-    height: 700px;
-    border: 1px solid #333;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    transition: background-color 0.3s ease;
-}
-.select-box:hover {
-    background-color: #ededed;
-}
-  
-.box-item {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    perspective: 1000px;
-    transition: transform 0.9s;
-    transform-style: preserve-3d;
+#footer p {
+    color: #fff;
 }
 
-.box-item:hover {
-    transform: rotateY(180deg);
-}
+/* 모바일 반응형 */
+@media (max-width: 776px) {
+    /* header */
+    #header h1 {
+        font-size: 16px;
+    }
 
-/* 카드 앞 뒷면 css */
-.box-front, .box-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #333;
-    border-radius: 10px;
-    background-color: #fff;
-    padding: 10px;
-}
-
-.box-front {
-    z-index: 2;
-    transform: rotateY(0deg);
-}
-
-.box-back {
-    transform: rotateY(180deg);
-}
-
-
-/* ==================================================== */
-/* footer */
-#sub-footer {
-    position: fixed;
-    right: 10px;
-    bottom: 0;
-}
-.footer-word {
-    color: #000;
+    /* project */
+    .projectDetailBox {
+        padding: 20px;
+        width: 300px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        border-radius: 10px;
+    }
+    .projectDetailBox p {
+        font-size: 11px;
+        line-height: 1.9;
+    }
+    .education h2 {
+        font-size: 23px;
+    }
+    .education .program {
+        border: 3px solid #111;
+        width: 300px;
+        margin: 0 auto;
+        padding: 30px;
+    }
+    .education .program p {
+        font-size: 11px;
+        line-height: 2.5;
+    }
 }

@@ -1,122 +1,33 @@
 /* main */
 .main {
-	height: 100%;
-	margin-bottom: 70px;
+	width: 100%;
+}
+#container {
+    height: 100vh;
 }
 
 /* select-wrap */
-.main .select-wrap h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-/*  select-box  */
-.select-box {
-    width: 90%;
-    height: 700px;
-    border: 1px solid #333;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    transition: background-color 0.3s ease;
-}
-.select-box:hover {
-    background-color: #ededed;
-}
-
-.box-item {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    perspective: 1000px;
-    transition: transform 0.9s;
-    transform-style: preserve-3d;
-}
-
-.box-item:hover {
-    transform: rotateY(180deg);
-}
-
-/* box-front, box-back */
-.box-front, .box-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #333;
-    border-radius: 10px;
-    background-color: #fff;
-    padding: 10px;
-}
-
-.box-front {
-    z-index: 2;
-    transform: rotateY(0deg);
-}
-
-.box-back {
-    transform: rotateY(180deg);
-}
-
-.box-front h3, .box-front p, .box-back p {
-    margin: 0;
+.select-wrap {
     text-align: center;
 }
-
-.box-front h3 {
-    font-size: 22px;
+.select-wrap h2 {
+    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 10px;
-    margin-right: 5px;
+    color: #fff;
 }
-
-.box-front p, .box-back p {
-    font-size: 14px;
-}
-
-
-/* main - modal */
-.modal {
-    display: none;
-    position: absolute;
-    top:0;
-    left: 0;
+.main-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background: rgba(0,0,0,0.5);
+    height: 100%;
 }
-.modal .modal-popup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background: #fff;
-    border-radius: 20px;
-    width: 200px;
-    height: 200px;
+.main-detail {
     text-align: center;
-    padding-top: 60px;
+    margin: 0 auto;
 }
-.modal .modal-txt {
-  position: relative;
-  color: #333;
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 1.9;
+.main-detail a {
+    color: #fff;
 }
-.modal .loading {
-  position: relative;
-  top: 30%;
-  background: none;
-}
+.main-detail a:hover {}

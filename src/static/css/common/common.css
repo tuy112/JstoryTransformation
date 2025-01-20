@@ -5,6 +5,13 @@
     /* position: relative; */
     height : 100vh;
 }
+/* main */
+.main {
+	width: 100%;
+}
+#container {
+    height: 100vh;
+}
 
 /* header */
 #header {
@@ -12,7 +19,7 @@
     width: 100%;
 }
 #header .inner {
-    height: 150px;
+    height: 160px;
 }
 
 /* header > h1 */

@@ -312,3 +312,21 @@
         opacity: 0.5;
     }
 }
+
+/* ============================================================= */
+/* 버튼 스타일 */
+.common-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.common-btn:hover {
+    background-color: #0056b3;
+}

@@ -1,122 +1,63 @@
-/* main */
-.main {
-	height: 100%;
-	margin-bottom: 70px;
-}
-
 /* select-wrap */
-.main .select-wrap h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-/*  select-box  */
-.select-box {
-    width: 90%;
-    height: 700px;
-    border: 1px solid #333;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    transition: background-color 0.3s ease;
-}
-.select-box:hover {
-    background-color: #ededed;
-}
-
-.box-item {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    perspective: 1000px;
-    transition: transform 0.9s;
-    transform-style: preserve-3d;
-}
-
-.box-item:hover {
-    transform: rotateY(180deg);
-}
-
-/* box-front, box-back */
-.box-front, .box-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #333;
-    border-radius: 10px;
-    background-color: #fff;
-    padding: 10px;
-}
-
-.box-front {
-    z-index: 2;
-    transform: rotateY(0deg);
-}
-
-.box-back {
-    transform: rotateY(180deg);
-}
-
-.box-front h3, .box-front p, .box-back p {
-    margin: 0;
+.select-wrap {
     text-align: center;
 }
-
-.box-front h3 {
-    font-size: 22px;
+.select-wrap h2 {
+    font-size: 50px;
     font-weight: 600;
-    margin-bottom: 10px;
-    margin-right: 5px;
+    color: #fff;
 }
-
-.box-front p, .box-back p {
-    font-size: 14px;
-}
-
-
-/* main - modal */
-.modal {
-    display: none;
-    position: absolute;
-    top:0;
-    left: 0;
+.main-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background: rgba(0,0,0,0.5);
+    height: 70vh; 
 }
-.modal .modal-popup {
-    position: absolute;
+.main-detail {
+    text-align: center;
+    margin: 0 auto;
+}
+.main-detail a {
+    color: #fff;
+    color: 25px;
+}
+.main-detail a:hover {
+    transform: translateY(5px);
+    color: #3498db;
+}
+
+/* modal */
+.modal {
+    position: fixed;
+    display: none;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
     background: #fff;
-    border-radius: 20px;
-    width: 200px;
-    height: 200px;
-    text-align: center;
-    padding-top: 60px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 10px;
+    width: 400px;
 }
-.modal .modal-txt {
-  position: relative;
-  color: #333;
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 1.9;
+.modal.open {
+    display: block;
 }
-.modal .loading {
-  position: relative;
-  top: 30%;
-  background: none;
+
+/* modal - 닫기 버튼 */
+.modal-close-btn {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.modal-close-btn:hover {
+    color: #ff5c5c;
 }

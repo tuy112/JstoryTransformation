@@ -1,13 +1,48 @@
 /* sub1 : profile */
-.main h2 {
+.profile {
+    text-align: center;
+}
+
+/* profile - intro */
+.intro {
+    height: 100%;
+}
+.intro h2 {
     text-align: center;
     font-weight: 400;
     font-size: 25px;
     color: #fff;
 }
+.intro .txtWrap {
+    padding: 20px;
+}
+.intro .txtWrap img {
+    width: 300px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+.intro p {
+    line-height: 2.1;
+    color: #fff;
+}
+
+/* profile - addi */
+.addi h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+}
+.addi p {
+    line-height: 2.1;
+    color: #333;
+}
+
 
 
 /* profile - lifeGraph */
+.lifeGraph {
+    height: 100%;
+}
 .lifeGraph h4 {
     position: relative;
     font-size: 21px;

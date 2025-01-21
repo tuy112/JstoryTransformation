@@ -1,9 +1,16 @@
 @media (max-width: 776px) {
+    /* header */
     .header-title {
         text-align: center;
         padding-top: 10px;
     }
+
     .header-title {
+        margin-left: 20px;
+    }
+
+    .site-subtitle {
         display: none;
     }
+    
   }

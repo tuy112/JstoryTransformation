@@ -14,7 +14,9 @@ Github 링크 : https://github.com/tuy112/Jstory
 
 1. 리액트 적용
 
-2. Java - React 연동 성공 (프론트-localhost:3000/백-localhost:10047) <br/>
+2. 코드 리팩토링 : 기존의 가독성 떨어지던 코드를 수정하는 작업 진행 ( 가독성, 유지보수성 향상 )
+
+3. Java - React 연동 성공 (프론트-localhost:3000/백-localhost:10047) <br/>
    => 아래 링크를 타고 들어가셔서 pull 받으시고 스프링부트 실행시켜주세요 :)
 
 👉 백엔드 작업 링크 : https://github.com/tuy112/Jstory-Java

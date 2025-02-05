@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { BiGame } from "react-icons/bi";
 
 function Header() {
-    // 1. 햄버거 메뉴 Onclick 기능
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
+    // 햄버거 메뉴 토글 핸들러 최적화
+    const toggleMenu = useCallback(() => {
+        setIsOpen(prev => !prev);
+    }, []);
 
     return (
         <header id="header">
@@ -22,8 +21,17 @@ function Header() {
                 </div>
                 
                 {/* Header HamburgerMenu */}
-                <button className="hamburger-menu" onClick={toggleMenu}>
-                    <BiGame color="#333" size={21} />
+                <button 
+                    className="hamburger-menu" 
+                    onClick={toggleMenu}
+                    aria-label="메뉴 열기"
+                    aria-expanded={isOpen}
+                >
+                    <div className="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </button>
 
                 <div className={`side-menu ${isOpen ? "open" : ""}`} id="sideMenu">
@@ -36,35 +44,51 @@ function Header() {
                         <li>
                             <Link to="/profile">About Me</Link>
                             <ul className="sub-section">
-                                <li><Link to ="/profile">Profile</Link></li>
-                                <li><Link to ="/project">Project</Link></li>
-                                <li><Link to ="/qna">FAQ</Link></li>
-                                <li><Link to ="/history">프로젝트연표</Link></li>
+                                <li><Link to="/profile">Profile</Link></li>
+                                <li><Link to="/project">Project</Link></li>
+                                <li><Link to="/qna">FAQ</Link></li>
+                                <li><Link to="/history">프로젝트연표</Link></li>
                             </ul>
                         </li>
                         <li>
-                            <Link to="/project">Jay's 공부방</Link>
+                            <Link to="/study">Jay's 공부방</Link>
                             <ul className="sub-section">
-                                <li><Link>TIL</Link></li>
-                                <li><Link>WIL</Link></li>
-                                <li><Link>정보처리기사</Link></li>
+                                <li><Link to="/study/til">TIL</Link></li>
+                                <li><Link to="/study/wil">WIL</Link></li>
+                                <li><Link to="/study/certificate">정보처리기사</Link></li>
                             </ul>
                         </li>
                         <li>
-                            <Link to="/todo">취미 기록방</Link>
+                            <Link to="/hobby">취미 기록방</Link>
                             <ul className="sub-section">
-                                <li><Link>등산</Link></li>
+                                <li><Link to="/mountain">등산</Link></li>
                             </ul>
                         </li>
                         <li>
-                            <Link to="/mountain">개인프로젝트 모음</Link>
+                            <Link to="/projects">개인프로젝트 모음</Link>
                         </li>
                     </ul>
 
                     <ul className="bottom-menu">
                         <li><Link to="/three">3D 공간</Link></li>
-                        <li><Link to="https://github.com/tuy112/Jstory">Jstory ASIS</Link></li>
-                        <li><Link to="https://jstoryjay.notion.site/Jay-UI-UX-124211b2c60980b98d93f25d148bdcc3?pvs=4">노션이력서</Link></li>
+                        <li>
+                            <Link 
+                                to="https://github.com/tuy112/Jstory" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Jstory ASIS
+                            </Link>
+                        </li>
+                        <li>
+                            <Link 
+                                to="https://jstoryjay.notion.site/Jay-UI-UX-124211b2c60980b98d93f25d148bdcc3?pvs=4"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                노션이력서
+                            </Link>
+                        </li>
                         <li>
                             <Link
                                 to="/doc/Jstory_고도화프로젝트_화면설계서_v0.26_250115.pptx"
@@ -78,18 +102,21 @@ function Header() {
                 </div>
 
                 {/* Header loginMenu */}
-                <div className="login-menu">
-                    <ul className="login-bar">
-                        <li>
-                            <Link to="/login">LOGIN</Link>
-                        </li>
-                        <li>
-                            <Link to="/signup">JOIN</Link>
-                        </li>
-                        <li>
-                            <Link to="/">Gate보러가기</Link>
-                        </li>
-                    </ul>
+                <div className="login-buttons">
+                    <div className="web-login">
+                        <Link to="/login" className="main-button">LOGIN</Link>
+                        <div className="sub-buttons">
+                            <Link to="/signup" className="sub-button">회원가입</Link>
+                            <Link to="/" className="sub-button">Gate 이동</Link>
+                        </div>
+                    </div>
+                    <div className="mobile-login">
+                        <Link to="/login" className="main-button">LOGIN</Link>
+                        <div className="sub-buttons">
+                            <Link to="/signup" className="sub-button">회원가입</Link>
+                            <Link to="/" className="sub-button">Gate 이동</Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>

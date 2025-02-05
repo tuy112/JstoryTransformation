@@ -1,5 +1,4 @@
 import React, { memo } from "react";
-import { Link } from "react-router-dom";
 
 import github from "../../static/images/GithubLogo.png";
 import blog from "../../static/images/TstoryLogo.png"; 

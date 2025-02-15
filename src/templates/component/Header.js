@@ -67,10 +67,13 @@ function Header() {
                         <li>
                             <Link to="/projects">개인프로젝트 모음</Link>
                         </li>
+                        <li>
+                            <Link to="/projects">3D 공간으로 초대합니다!</Link>
+                        </li>
                     </ul>
 
                     <ul className="bottom-menu">
-                        <li><Link to="/three">3D 공간</Link></li>
+                        <li><Link to="/todo">TODOLIST</Link></li>
                         <li>
                             <Link 
                                 to="https://github.com/tuy112/Jstory" 
@@ -104,10 +107,10 @@ function Header() {
                 {/* Header loginMenu */}
                 <div className="login-buttons">
                     <div className="web-login">
-                        <Link to="/login" className="main-button">LOGIN</Link>
+                        <div className="main-button">로그인메뉴</div>
                         <div className="sub-buttons">
+                            <Link to="/login" className="sub-button">로그인</Link>
                             <Link to="/signup" className="sub-button">회원가입</Link>
-                            <Link to="/" className="sub-button">Gate 이동</Link>
                         </div>
                     </div>
                     <div className="mobile-login">

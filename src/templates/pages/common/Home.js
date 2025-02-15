@@ -107,11 +107,10 @@ function Home() {
                             </Link>
                         </div>
                         <div className="main-detail">
-                            <h3>3D Space</h3>
-                            <p>제가 만든 3D 공간을 구경해보세요!</p>
-                            <p>Jay만의 힐링 공간입니다.</p>
-                            <Link to="/three" className="cta-button">
-                                3D 공간 체험하기
+                            <h3>TODOLIST</h3>
+                            <p>로그인하고 들어가셔서 일일계획 짜보세요.</p>
+                            <Link to="/todo" className="cta-button">
+                                계획 짜러가기
                             </Link>
                         </div>
                     </div>

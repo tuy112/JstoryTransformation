@@ -1,38 +1,161 @@
-form {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    margin: 0 auto;
-    margin-top: 100px;
+/* 임시 아이디, 비밀번호 */
+.tempoary-text {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: right;
+    font-size: 12px;
+    margin-top: 10px;
+    font-style: italic;
 }
 
-label {
+/* 로그인, 회원가입 제목 */
+.login-title {
+    margin: 20px 0 40px;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 로그인, 회원가입 form */
+.login-form {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.login-label {
     display: block;
+    text-align: left;
+    color: #fff;
     margin-bottom: 8px;
-    font-weight: bold;
-    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
-input[type="text"], 
-input[type="password"] {
+.login-text {
     width: 100%;
-    padding: 10px;
+    padding: 12px 15px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 14px;
     transition: all 0.3s ease;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+.login-text::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
-form p {
+/* 로그인, 회원가입 form start */
+.login-form {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* 로그인, 회원가입 상단 제목 */
+.login-title {
+    margin: 20px 0 40px;
     text-align: center;
-    margin-bottom: 16px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 로그인, 회원가입 label */
+.login-label {
+    display: block;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* 로그인, 회원가입 inputBox */
+.login-text {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.login-text::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.login-text:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* 로그인, 회원가입 버튼 */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #fff;
+    color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 링크 버튼 스타일링 */
+.auth-btn {
+    display: block;
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* 에러 메시지 스타일링 */
+.error-message {
+    color: #ff6b6b;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
 }

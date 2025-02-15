@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
+
+import Header from "../component/Header";
 
 import '../../static/css/common/reset.css';
 import '../../static/css/login.css';
@@ -56,7 +59,7 @@ const Login = () => {
         if (Id === testUser.id && Password === testUser.password) {
             console.log('로그인 성공');
             setError("");
-            navigate('/todo');
+            navigate('/home');
         } else {
             console.log('로그인 실패:', Id, Password);
             setError("아이디 또는 비밀번호가 일치하지 않습니다.");
@@ -65,12 +68,16 @@ const Login = () => {
 
     return(
         <div id="wrap">
-            {/* 임시 */}
-            <h5>testUser : abc1234 / pw : 1234</h5>
+            <Header/>
 
-            <form onSubmit={onSubmitHandler}>
-                <label>Id</label>
+            {/* 임시 */}
+            <p className='tempoary-text'>testUser : abc1234 / pw : 1234</p>
+            <h2 className='login-title'>로그인</h2>
+
+            <form className='login-form' onSubmit={onSubmitHandler}>
+                <label className='login-label'>Id : </label>
                 <input
+                    className='login-text'
                     type='text'
                     value={Id}
                     onChange={onIdHandler}
@@ -78,16 +85,17 @@ const Login = () => {
                     placeholder="아이디를 입력하세요"
                 />
 
-                <label>Password</label>
+                <label className='login-label'>Password : </label>
                 <input
+                    className='login-text'
                     type='password'
                     value={Password}
                     onChange={onPasswordHandler}
                     required
                     placeholder="비밀번호를 입력하세요"
                 />
-                <button type="submit">Login</button>
-
+                <button className='login-btn' type="submit">로그인</button>
+                <Link to='/signup' className='auth-btn'>회원이 아니세요? 회원가입!</Link>
                 {error && <p style={{ color: 'red' }}>{error}</p>}
             </form>
         </div>

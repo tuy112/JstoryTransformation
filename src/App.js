@@ -3,17 +3,25 @@ import { Routes, Route } from 'react-router-dom';
 import './static/css/common/reset.css';
 import './static/css/common/gate.css';
 
-// Components
+// 공통
 import Gate from './templates/pages/common/Gate';
 import Home from './templates/pages/common/Home';
+
+// 소개
 import Profile from './templates/pages/Profile';
 import Project from './templates/pages/Project';
 import History from './templates/pages/History';
+
+// 로그인, 회원가입
 import Login from './templates/pages/Login';
 import Signup from './templates/pages/Signup';
+
+// 프로젝트
 import Todo from './templates/projects/todo/Todo';
 import Mountain from './templates/projects/mountain/Mountain';
 import Three from './templates/projects/three/Three';
+import Linux from './templates/projects/study/Linux';
+import Certificate from './templates/projects/study/Certificate';
 
 const App = () => {
   return (
@@ -35,6 +43,8 @@ const App = () => {
       <Route path="/todo" element={<Todo />} />
       <Route path="/three" element={<Three />} />
       <Route path="/mountain" element={<Mountain />} />
+      <Route path="/linux-study" element={<Linux />} />
+      <Route path="/certificate" element={<Certificate />} />
     </Routes>
   );
 };

@@ -51,11 +51,10 @@ function Header() {
                             </ul>
                         </li>
                         <li>
-                            <Link to="/study">Jay's 공부방</Link>
+                            <Link to="/study">Jay's 공부 공간</Link>
                             <ul className="sub-section">
-                                <li><Link to="/study/til">TIL</Link></li>
-                                <li><Link to="/study/wil">WIL</Link></li>
-                                <li><Link to="/study/certificate">정보처리기사</Link></li>
+                                <li><Link to="/linux-study">리눅스</Link></li>
+                                <li><Link to="/certificate">정보처리기사</Link></li>
                             </ul>
                         </li>
                         <li>

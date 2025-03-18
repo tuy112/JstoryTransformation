@@ -53,8 +53,8 @@ function Header() {
                         <li>
                             <Link to="/study">Jay's 공부 공간</Link>
                             <ul className="sub-section">
-                                <li><Link to="/linux-study">리눅스</Link></li>
-                                <li><Link to="/certificate">정보처리기사</Link></li>
+                                <li><Link to="/server-create">리눅스 서버구축하기</Link></li>
+                                <li><Link to="/certificate">공부방(리눅스+정처기)</Link></li>
                             </ul>
                         </li>
                         <li>

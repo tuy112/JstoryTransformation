@@ -6,9 +6,9 @@ import { Canvas } from '@react-three/fiber';
 import { Html } from '@react-three/drei';
 import { Physics } from '@react-three/cannon'; // 물리엔진
 import { Sky, PointerLockControls } from "@react-three/drei";
-import Ground from '../../component/three/Ground'; // 땅 + 하늘
-import Character from '../../component/three/Character'; // 캐릭터
-import Player from "../../component/three/Player";
+import Ground from './component/Ground'; // 땅 + 하늘
+import Character from './component/Character'; // 캐릭터
+import Player from "./component/Player";
 
 function App() {
   

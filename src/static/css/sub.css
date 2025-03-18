@@ -185,6 +185,8 @@
 .box-front {
     z-index: 2;
     transform: rotateY(0deg);
+    display: flex;
+    flex-direction: column;
 }
 
 .box-back {

@@ -1,0 +1,44 @@
+.content {
+    margin-bottom: 30px;
+}
+
+/* 지도 래퍼 */
+.content.mapWrap {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.content.mapWrap h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* 지도 스타일 */
+.map {
+    width: 90%;
+    height: 600px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 추가 버튼 스타일 */
+.storyBtn {
+    text-align: right;
+    margin-right: 15px;
+}
+
+.addBtn {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    transition: all 0.3s;
+}

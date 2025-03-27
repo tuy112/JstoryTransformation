@@ -23,6 +23,9 @@ import Three from './templates/projects/three/Three';
 import ServerCreate from './templates/projects/study/ServerCreate';
 import Certificate from './templates/projects/study/Certificate';
 
+// 모달 모음
+import TilModal from './templates/component/TilModal';
+
 const App = () => {
   return (
     <Routes>
@@ -45,6 +48,9 @@ const App = () => {
       <Route path="/mountain" element={<Mountain />} />
       <Route path="/server-create" element={<ServerCreate />} />
       <Route path="/certificate" element={<Certificate />} />
+
+      {/* modal components */}
+      <Route path="/til" element={<TilModal />} />
     </Routes>
   );
 };

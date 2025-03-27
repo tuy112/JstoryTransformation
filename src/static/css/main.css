@@ -83,46 +83,6 @@
     text-shadow: 0 0 15px rgba(52,152,219,0.7);
 }
 
-/* modal */
-.modal {
-    position: fixed;
-    display: none;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(255,255,255,0.95);
-    padding: 40px;
-    box-shadow: 0 15px 50px rgba(31,38,135,0.4);
-    z-index: 1000;
-    border-radius: 25px;
-    width: 500px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.2);
-}
-
-.modal.open {
-    display: block;
-    animation: modalFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* modal - 닫기 버튼 */
-.modal-close-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 28px;
-    color: #333;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    padding: 8px;
-}
-
-.modal-close-btn:hover {
-    color: #ff3b3b;
-    transform: rotate(180deg);
-}
 
 @keyframes modalFadeIn {
     from {

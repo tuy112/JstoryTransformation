@@ -1,8 +1,8 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 import Header from "../component/Header";
-
+import Footer from "../component/Footer";
 
 import '../../static/css/common/reset.css';
 import '../../static/css/sub.css';
@@ -45,7 +45,7 @@ const Project = () => {
                             </div>
                         </div>
 
-                        <div className="box-item item2" onClick={() => navigate('/project')}>
+                        <div className="box-item item2" onClick={() => navigate('/profile')}>
                             <div className="box-front">
                                 <h3>LGU+ 관리자(Admin) 페이지 현대화 프로젝트</h3>
                                 <p>2024-06 ~ 2024-09</p>
@@ -64,7 +64,7 @@ const Project = () => {
                             </div>
                         </div>
 
-                        <div className="box-item item3" onClick={() => navigate('/login')}>
+                        <div className="box-item item3" onClick={() => navigate('/profile')}>
                             <div className="box-front">
                                 <h3>LX플랫폼 고도화 프로젝트</h3>
                                 <p>[2023-11-06 ~ 2024-01-26]</p>
@@ -83,7 +83,7 @@ const Project = () => {
                             </div>
                         </div>
 
-                        <div className="box-item item4" onClick={() => navigate('/login')}>
+                        <div className="box-item item4" onClick={() => navigate('/profile')}>
                             <div className="box-front">
                                 <h3>신한은행 통합단말 차세대프로젝트</h3>
                                 <p>[2022-02-03 ~ 2022-09-30]</p>
@@ -103,10 +103,7 @@ const Project = () => {
                 </div>
             </section>
 
-            {/* footer */}
-            <footer id="sub-footer">
-                <p className="footer-word">Made By Kim Jae Hyeok</p>
-            </footer>
+            <Footer/>
         </div>
     );
 }

@@ -46,8 +46,6 @@ function Header() {
                             <ul className="sub-section">
                                 <li><Link to="/profile">Profile</Link></li>
                                 <li><Link to="/project">Project</Link></li>
-                                <li><Link to="/qna">FAQ</Link></li>
-                                <li><Link to="/history">프로젝트연표</Link></li>
                             </ul>
                         </li>
                         <li>
@@ -64,15 +62,12 @@ function Header() {
                             </ul>
                         </li>
                         <li>
-                            <Link to="/projects">개인프로젝트 모음</Link>
-                        </li>
-                        <li>
-                            <Link to="/projects">3D 공간으로 초대합니다!</Link>
+                            <Link to="/three">3D 공간으로 초대합니다!</Link>
                         </li>
                     </ul>
 
                     <ul className="bottom-menu">
-                        <li><Link to="/todo">TODOLIST</Link></li>
+                        <li><Link to="/todo">TIL/WIL</Link></li>
                         <li>
                             <Link 
                                 to="https://github.com/tuy112/Jstory" 
@@ -88,7 +83,7 @@ function Header() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                노션이력서
+                                노션 이력서 링크
                             </Link>
                         </li>
                         <li>

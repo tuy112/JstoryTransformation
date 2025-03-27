@@ -2,6 +2,11 @@
 .profile {
     text-align: center;
 }
+hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 2px solid #fff;
+}
 
 /* profile - intro */
 .intro {
@@ -12,6 +17,7 @@
     font-weight: 400;
     font-size: 25px;
     color: #fff;
+    text-decoration: underline;
 }
 .intro .txtWrap {
     padding: 20px;
@@ -31,10 +37,12 @@
     text-align: center;
     font-weight: 600;
     font-size: 25px;
+    color: #fff;
+    text-decoration: underline;
 }
 .addi p {
     line-height: 2.1;
-    color: #333;
+    color: #fff;
 }
 
 
@@ -46,11 +54,11 @@
 .lifeGraph h4 {
     position: relative;
     font-size: 21px;
-    color: #333;
+    color: #fff;
     line-height: 1;
     font-weight: 700;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    text-decoration: underline;
 }
 .lifeGraph h4::before {
     content: "";
@@ -88,7 +96,7 @@
 .lifeGraph dl dt {
     position: relative;
     font-size: 17px;
-    color: #333;
+    color: #fff;
     line-height: 1;
     margin-bottom: 8px;
     font-weight: 500;
@@ -108,20 +116,20 @@
     box-sizing: border-box;
 }
 .lifeGraph dl dd {
-    line-height: 2.1;
+    line-height: 1.9;
 }
 .lifeGraph dl dd strong {
     display: block;
     font-size: 15px;
-    color: #333;
-    line-height: 2.1;
+    color: #fff;
+    line-height: 1.9;
     font-weight: 400;
 }
 .lifeGraph dl dd em {
     display: block;
     font-size: 12px;
-    color: #333;
-    line-height: 1.9;
+    color: #fff;
+    line-height: 1.7;
     padding-left: 30px;
     font-weight: 600;
 }
@@ -191,16 +199,4 @@
 
 .box-back {
     transform: rotateY(180deg);
-}
-
-
-/* ==================================================== */
-/* footer */
-#sub-footer {
-    position: fixed;
-    right: 10px;
-    bottom: 0;
-}
-.footer-word {
-    color: #000;
 }

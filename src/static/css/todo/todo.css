@@ -1,75 +1,19 @@
-/* 공통 변수 */
-:root {
-    /* --primary-color: #4a90e2;
-    --primary-hover: #357abd;
-    --danger-color: #e74c3c;
-    --danger-hover: #c0392b;
-    --border-color: #e0e0e0;
-    --text-color: #2c3e50;
-    --bg-light: #f5f6fa;
-    --shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-    --border-radius: 6px;
-    --transition: 0.2s ease; */
-}
-
-/* 타이틀 */
+/* 제목 부 */
 .title-section {
-    margin-top: 30px;
+    margin-top: 50px;
 }
 .title-section h1 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: #6c5ce7;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #fff;
     text-align: center;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
+    margin-bottom: 1rem;
     letter-spacing: 2px;
 }
-
-/* 입력 영역 */
-.input-section {
-    margin-bottom: 2rem;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 1.5rem;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+/* 제목 부 - 버튼 공통 css */
+.button-group {
+    text-align: right;
 }
-
-.input-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.input-wrapper label {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: #2d3436;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-.todo-input {
-    flex: 1;
-    padding: 0.8rem 1rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    background: #f1f2f6;
-    box-shadow: inset 2px 2px 5px #d9d9d9, inset -2px -2px 5px #ffffff;
-    min-width: 300px;
-}
-
-.todo-input:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.2);
-}
-
-/* 버튼 스타일 */
 .add-button, .delete-button {
     padding: 0.8rem 1.2rem;
     border: none;
@@ -82,6 +26,7 @@
     transition: all 0.3s ease;
 }
 
+/* 제목 부 - 추가 버튼 */
 .add-button {
     background: linear-gradient(45deg, #6c5ce7, #a55eea);
 }
@@ -90,23 +35,26 @@
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(108, 92, 231, 0.2);
 }
+.add-button:nth-child(2) {
+    margin-left: 10px;
+    margin-right: 80px;
+}
 
+/* 제목 부 - 삭제 버튼 */
 .delete-button {
     background: linear-gradient(45deg, #ff6b6b, #ff8787);
     padding: 0.6rem 1rem;
 }
-
 .delete-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);
 }
-
 .button-container {
     margin-top: 1rem;
     text-align: center;
 }
 
-/* 테이블 스타일 */
+/* 테이블 시작! */
 .todo-table, .record-table, .accounting-table {
     width: 90%;
     margin: 1.5rem auto;

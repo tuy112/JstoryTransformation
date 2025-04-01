@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../static/images/earth.png';
 
+import '../../../static/css/common/gate.css';
+
 function Gate() {
-    const [isLoading, setIsLoading] = useState(true); // 로딩 상태태
-    const [progress, setProgress] = useState(0); // 막대바 진행도
+    const [isLoading, setIsLoading] = useState(true);
+    const [progress, setProgress] = useState(0);
 
     useEffect(() => {
-      // 1. 기능 1 : 5초 동안 로딩 진행
       const interval = setInterval(() => {
         setProgress((prev) => {
           if (prev >= 100) {
@@ -15,14 +16,14 @@ function Gate() {
             setIsLoading(false); // 로딩 완료
             return 100;
           }
-          return prev + 2; // 2씩 증가 (5초 동안 100까지 도달)
+          return prev + 2;
         });
       }, 100);
   
       return () => clearInterval(interval);
     }, []);
 
-    // 2. 기능 2 : 별
+    // 별
     useEffect(() => {
       const stars = document.querySelectorAll('.star');
       stars.forEach(star => {
@@ -33,7 +34,7 @@ function Gate() {
       });
     }, [isLoading]);
 
-    // 로딩창 화면
+    // 로딩창
     if (isLoading) {
       return (
         <div className="loading-screen">

@@ -3,9 +3,7 @@ import React from "react";
 import Header from "../../component/Header";
 import Footer from "../../component/Footer";
 
-import '../../../static/css/common/reset.css';
-import '../../../static/css/common/common.css';
-import './style/study.css';
+import '../../../static/css/study/study.css';
 
 const Certificate = () => {
     

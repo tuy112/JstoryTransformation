@@ -1,39 +1,64 @@
-# Jstory ASIS
+# 📘 Jstory Project
 
-Github 링크 : https://github.com/tuy112/Jstory
+**AS-IS GitHub Repository**  
+🔗 https://github.com/tuy112/Jstory  
 
-# Jstory TOBE
+**TO-BE 배포 페이지**  
+🚀 https://tuy112.github.io  
 
-👉 배포 페이지 : https://tuy112.github.io
+**최신 업데이트 날짜:** 2025.04.01  
+**최신 릴리즈 버전:** `ver 0.5`  
+**예정 출시 버전:** `ver 1.0 (2025. 06 ~ 07)`  
 
-최신 업데이트 날짜 : 2024.09.05
+---
 
-최신 릴리즈 버전 : ver 0.4 ( ver 1.0 출시 예정일: 2025.05 ~ 06 )
+## 🔧 고도화 프로젝트 주요 내용
 
-### Jstory 고도화 프로젝트 주요 내용
+### ✅ React 도입 및 코드 리팩토링
+- 기존 코드 가독성 및 유지보수성 향상
+- 컴포넌트 구조 정비 및 CSS 재정비
 
-1. 리액트 적용
+### ✅ Java - React 연동 성공
+- 프론트엔드: `localhost:3000`  
+- 백엔드: `localhost:10047`  
 
-2. 코드 리팩토링 : 기존의 가독성 떨어지던 코드를 수정하는 작업 진행 ( 가독성, 유지보수성 향상 )
+🔗 **Backend Repository**  
+👉 https://github.com/tuy112/Jstory-Java  
 
-3. Java - React 연동 성공 (프론트-localhost:3000/백-localhost:10047) <br/>
-   => 아래 링크를 타고 들어가셔서 pull 받으시고 스프링부트 실행시켜주세요 :)
+---
 
-👉 백엔드 작업 링크 : https://github.com/tuy112/Jstory-Java
+## 🗂 주요 기능 및 작업 내용
 
-3. 화면설계서(PPT) + 연동규격서(XLSX) 제작 후 엑셀 다운로드 버튼 추가<br/> (개발중)
+### 🖼 화면설계서 + 연동규격서 제작 중
+- PPT 화면설계서 및 XLSX 연동규격서
+- 연동 후 `엑셀 다운로드` 버튼 제공 예정
 
-4. map.js (OpenLayers)를 이용해서 "산 기록방" 페이지 제작 [지도 위에 점 표시]
+### 🗺 산 기록방 페이지 제작
+- `OpenLayers` 기반의 `map.js` 사용
+- 지도 위에 등산 기록 점 표시
 
-👉 산 기록방 작업 링크 : https://github.com/tuy112/gisDev
+🔗 **GIS 작업 링크**  
+👉 https://github.com/tuy112/gisDev  
 
-5. 나의 연표 ( Profile ) / 내가 지금까지 수행한 프로젝트 목록 ( Project )
+### 📌 나의 연표 / 프로젝트 이력
+- **Profile**: 개인 연혁
+- **Project**: 수행한 프로젝트 목록 정리
 
-6. TODOLIST + 몸무게 기록실 제작 중 ( Java )
+### 📅 TODOLIST + 몸무게 기록실 (Java 기반)
+- 할 일 관리 + 건강 기록 기능 개발 중
 
-7. JGame이라는 페이지 신규 추가 ( 내가 만든 게임 모음 페이지 - Three.js X Java 사용 예정)
+### 🎮 JGame (게임 모음 페이지)
+- 내가 만든 게임 모음
+- **Three.js + Java 연동** 예정
 
-8. QNA라는 모달 신규 추가 -> 이메일 보내기 기능 ( Java )
+### 📩 QNA 모달 추가
+- 이메일 문의 기능 포함 (Java 기반)
+
+### 🤖 파이썬을 활용한 JBOY 개발 중
+- AI 기록 요약 기능 (TIL 공부내용 자동 요약)
+- 채팅봇 비서 (Jbot)
+
+---
 
 
 ### Tools

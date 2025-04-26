@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../../static/css/three/three.css';
 
 // three.js (3D 공간 만들기)
 import { Canvas } from '@react-three/fiber';

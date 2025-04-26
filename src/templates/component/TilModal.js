@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import '../../static/css/common/reset.css';
-import '../../static/css/common/modal.css';
-
 const TilModal = () => {
     const navigate = useNavigate();
 

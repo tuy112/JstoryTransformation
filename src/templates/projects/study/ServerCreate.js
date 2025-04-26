@@ -1,7 +1,8 @@
 import React from 'react';
 
-import './style/study.css';
 import Header from "../../component/Header";
+
+import '../../../static/css/study/study.css';
 
 function ServerCreate() {
   return (
@@ -32,7 +33,7 @@ function ServerCreate() {
               <h3>1.2 기본 보안 설정</h3>
               <p>서버 보안을 위한 기본 설정을 진행합니다:</p>
               <pre className="code-block">
-                <code>
+
                   # SSH 포트 변경 (선택사항)
                   sudo nano /etc/ssh/sshd_config
                   # Port 22 행을 찾아 Port 2222(원하는 포트)로 변경
@@ -46,7 +47,7 @@ function ServerCreate() {
 
                   # SSH 서비스 재시작
                   sudo systemctl restart sshd
-                </code>
+
               </pre>
             </div>
           </div>

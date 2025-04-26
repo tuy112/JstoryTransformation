@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 
 import Header from "../component/Header";
 
-import '../../static/css/common/reset.css';
-import '../../static/css/login.css';
-
 const Login = () => {
     const [Id, setId] = useState("");
     const [Password, setPassword] = useState("");

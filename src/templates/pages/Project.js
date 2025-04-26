@@ -4,9 +4,6 @@ import { useNavigate } from "react-router-dom";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
 
-import '../../static/css/common/reset.css';
-import '../../static/css/sub.css';
-
 const Project = () => {
     const navigate = useNavigate();
 

@@ -3,9 +3,6 @@ import React, { useEffect } from "react";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
 
-import '../../static/css/common/reset.css';
-import '../../static/css/sub.css';
-
 // image
 import me from '../../static/images/about_man.png';
 

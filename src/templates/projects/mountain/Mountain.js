@@ -4,9 +4,6 @@ import Header from "../../component/Header";
 import Modal from '../mountain/components/Modal'; 
 import MapComponent from '../mountain/components/MapComponent';
 
-import '../../../static/css/common/reset.css';
-import '../../../static/css/mountain/mountain.css';
-
 const Mountain = () => {
     // 산 목록을 상태로 관리
     const [mountains, setMountains] = useState([

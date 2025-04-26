@@ -7,45 +7,40 @@
     font-weight: 500;
     color: #fff;
     text-align: center;
-    margin-bottom: 1rem;
-    letter-spacing: 2px;
+    margin-bottom: 0.7rem;
 }
-/* 제목 부 - 버튼 공통 css */
-.button-group {
+
+/* 버튼 css */
+.btn-group {
     text-align: right;
 }
-.add-button, .delete-button {
-    padding: 0.8rem 1.2rem;
+.add-btn, .delete-btn {
+    padding: 0.5rem 1rem;
     border: none;
     color: #fff;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
     transition: all 0.3s ease;
 }
-
-/* 제목 부 - 추가 버튼 */
-.add-button {
+.add-btn {
     background: linear-gradient(45deg, #6c5ce7, #a55eea);
 }
-
-.add-button:hover {
+.add-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(108, 92, 231, 0.2);
 }
-.add-button:nth-child(2) {
+.add-btn:nth-child(2) {
     margin-left: 10px;
-    margin-right: 80px;
+    margin-right: 50px;
 }
 
-/* 제목 부 - 삭제 버튼 */
-.delete-button {
+.delete-btn {
     background: linear-gradient(45deg, #ff6b6b, #ff8787);
-    padding: 0.6rem 1rem;
+    padding: 0.4rem 1rem;
 }
-.delete-button:hover {
+.delete-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);
 }
@@ -54,33 +49,29 @@
     text-align: center;
 }
 
-/* 테이블 시작! */
-.todo-table, .record-table, .accounting-table {
+
+/* 테이블 css */
+.todo-table {
     width: 90%;
-    margin: 1.5rem auto;
+    margin: 0.8rem auto;
     border-collapse: separate;
     border-spacing: 0;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-
-.todo-table th, .todo-table td,
-.record-table th, .record-table td,
-.accounting-table th, .accounting-table td {
+.todo-table th, .todo-table td {
     padding: 1rem;
     text-align: center;
 }
-
-.todo-table th, .record-table th, .accounting-table th {
+.todo-table th {
     background: linear-gradient(45deg, #6c5ce7, #a55eea);
     color: #fff;
     font-weight: 600;
     font-size: 0.9rem;
     text-transform: uppercase;
 }
-
-.todo-table td, .record-table td, .accounting-table td {
+.todo-table td {
     background-color: #fff;
     font-size: 0.9rem;
     color: #2d3436;

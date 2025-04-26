@@ -1,7 +1,5 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import './static/css/common/reset.css';
-import './static/css/common/gate.css';
 
 // 공통
 import Gate from './templates/pages/common/Gate';
